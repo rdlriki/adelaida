@@ -128,9 +128,6 @@
   }
 }
 
-.presentacion {
-  /*Estilo la presentacion dependiendo la resolucion*/
-}
 
 .presentacion__titulo h3 {
   font-family: "Italianno", cursive;
@@ -371,9 +368,6 @@
   }
 }
 
-.articleQuienSoy__pasteleros {
-  /*ESTILO LAS FOTOS D LOS PASTELEROS Y LE DOY ANIMACION, EN TODOS HAGO LO MISMO*/
-}
 
 .articleQuienSoy__pasteleros__pedroLambertini {
   -webkit-box-pack: justify;
@@ -448,9 +442,6 @@
 }
 
 @media screen and (min-width: 577px) {
-  .articleQuienSoy__pasteleros {
-    /*CAMBIO TAMAÑOS DE FOTOS DE ACUERDO A RESOLUCION*/
-  }
   .articleQuienSoy__pasteleros__pedroLambertini img {
     height: 180px;
     width: 150px;
@@ -504,9 +495,6 @@
   background-repeat: no-repeat;
 }
 
-.mainSalado__carrusel {
-  /*CUANDO LA PATNALLA ES CHICA, HAGO UN CARRUSEL DE LAS FOTOS HORIZONTALES*/
-}
 
 @media screen and (max-width: 576px) {
   .mainSalado__carrusel {
