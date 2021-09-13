@@ -74,6 +74,22 @@
         &__formulario{
             background-color: black; /*CAMBIO DE COLOR EL BACKGROUND*/
             opacity: 90%;
+            & label{
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize;
+                }
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize + 2px;
+                }
+            }
+            & input{
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: 14x;
+                }
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize + 2px;
+                }
+            }
             &__seleccionUsuario{
                 display: flex;  /*ROMPO LA ESTRUCTURA PARA ACOMODAR LOS COMPONENTES*/
                 flex-direction: column;
