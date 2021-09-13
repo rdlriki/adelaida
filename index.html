@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Adelaida Pâtisserie,, preparaciones caseras con productos de primera calidad. Sabores de placer">
+    <meta name="keywords" content="pasteleria, casero, rico, sabroso, salado, dulce, delicioso">
+
+
+    <!-- ACA PEGO SCRIPT DE FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/8e3afbb123.js" crossorigin="anonymous"></script>
+
+    <!-- AGREGO LAS FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=WindSong&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- CSS DE BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- LINK DEL CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- TITULO DE LA PAGINA -->
+    <title>Adelaida Pâtisserie / HOME</title>
+
+</head>
+
+<body id="index">
+
+    <!-- CONTENEDOR HEADER -->
+
+    <header class="conteiner-fluid header">
+
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light shadow-sm haeder__menu">
+            <div class="container m-0 header__menu__logo">
+                <img src="./Multimedia/IMG/AdelaidaLogo.jpg" alt="AdelaidaLogo"
+                    class="d-inline-block align-middle mr-2 header__menu__adelaidaLogo">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMenu"
+                    aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler-icon"><span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div id="navBarMenu" class="collapse navbar-collapse header__menu__alineado">
+                    <ul class="navbar-nav me-auto mb-lg-0 align-items-end"> <!-- EN MODO HAMBURGUESA, LOS SUB MENU ESTAN ORDENADOS A LA DERECHA DE LA PANTALLA -->
+                        <li class="nav-item">
+                            
+                            <!-- ESTILO LA ETAPA DEL MENU DONDE ESTOY NAVEGANDO -->
+                            <!-- EN HOME APARECERÁ SUBRALLADA DE COLOR CELESTE -->
+                            <!-- Y EL COLOR DE LA LETRA DEL HOME ESTARÁ EN CELESTE BOLDER -->
+                            <!-- ESTO MISMO LO REPITO EN EL RESTO DE LAS PAGINAS -->
+
+                            <a class="nav-link active fw-bolder text-decoration-underline text-primary" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Pages/quien_soy.html">Quien Soy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Pages/salado.html">Salado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Pages/dulce.html">Dulce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        <!-- MAIN DEL PROYECTO -->
+    <main class="main conteiner-fluid">
+        <section class="main__tituloAdelaida">
+            <p>El placer de lo dulce y la satisfacción de lo salado.</p>
+        </section>
+
+        <!-- GENERO EL CONTENEDOR PARA COLOCAR LAS FILAS/FOTOS -->
+
+        <!-- IMPORTANTE!!!!!! GENERO 2 TIPOS DE CONTEINER: COLUMNAS Y CARRUSEL -->
+        <!-- LA IDEA ES QUE EL CARRUSEL SEA VISIBLE CUANDO LA PANTALLA ESTE EN TAMAÑO CELULAR -->
+        <!-- Y LAS COLUMNAS ESTEN VISIBLES CUANDO LA PANTALLA YA NO SEA DE CELULAR -->
+        <!-- GENERO DENTRO DE ESTAS CLASES, LA ETIQUETA "COLUMNAS" Y "CARRUSEL" -->
+
+
+        <!-- BLOQUE COLUMNAS -->
+        <section class="conteiner-fluid text-center p-1 main__columnas">
+            <div class="row m-1 ">
+
+                <!-- COLUMNAS CON 3 FOTOS ADAPTADAS PARA MOBILE, SM Y LG -->
+                <!-- A LAS CARD LE SAQUE EL BORDE Y LE PUSE BACK GROUND TRANSPARENTE -->
+                <div class="card col-12 col-sm-6 col-lg-6 p-1  bg-transparent border-0 main__columnas__tarjeta">
+                    <img src="./Multimedia/IMG/Salado.jpg" class="card-img-top m-auto" alt="Salado">
+                    <div class="card-body">
+                        <p class="card-text">La satisfacción de lo Salado</p>
+                    </div>
+                </div>
+
+                <div class="card col-12 col-sm-6 col-lg-6 p-1 bg-transparent border-0 main__columnas__tarjeta">
+                    <img src="./Multimedia/IMG/Dulce.jpg" class="card-img-top m-auto" alt="Dulce">
+                    <div class="card-body">
+                        <p class="card-text">El placer de lo Dulce</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- BLOQUE CARRUSEL -->
+        <section class="conteiner-fluid text-center p-2 main__carrusel ">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide justify-item-center" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner main__carrusel__contenido">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="./Multimedia/IMG/Salado.jpg" class="d-block" alt="Salado">
+                        <div class="carousel-caption d-md-block main__carrusel__contenido_carruselTexto fw-bolder">
+                            <h5>Preparaciones saladas</h5>
+                            <p>La satisfacción de lo Salado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./Multimedia/IMG/Dulce.jpg" class="d-block" alt="Dulce">
+                        <div class="carousel-caption d-md-block main__carrusel__contenido_carruselTexto fw-bolder">
+                            <h5>Preparaciones Dulces</h5>
+                            <p>El placer de lo Dulce</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+
+        <!-- TEXTO PRESENTACION -->
+    <article class="presentacion"> 
+        <section class="text-center container mt-2 pt-2 presentacionIndex  presentacion__titulo">
+            <h3 class="fw-bold">Bienvenidos a Adelaida Pâtisserie</h3>
+        </section>
+
+        <!-- CONTENIDO DE LA PRESENTACION CON FONDO LIGHT PERO OPACO AL 50% TEXTO EN NEGRITA -->
+        <div class="text-left bg-light opacity-50 text-dark fw-bolder p-2  presentacion__texto">
+            <p>En esta página encontrará nuestras delicias Dulces y Saladas.
+            <p>Hacemos envíos a todos los barrios de CABA. Puede optar realizar el envío por su aplicación preferida
+                (Rappi/Pedidos Ya).</p>
+            <p>Aceptamos todo medio de pago: Efectivo / Mercado Pago / Transferencia Bancaria.</p>
+            <p>Todos los pedidos deben hacerse con 48hs de anticipación.</p>
+            <p>Considere que la pastelerìa necesita tiempos de frìo y reposos fundamentales para que su preparación
+                sea la adecuada.</p>
+        </div>
+    </article>
+
+        <!-- FOOTER PARA LAS REDES SOCIALES -->
+        <!-- ACA MI IDEA ES COLOCAR UN BOTON QUE AL APRETARLO, ME DESPLEGUE LA SECCION CON LOS ICONOS DE LAS REDES SOCIALES -->
+
+    <footer class="dropdown main__bootFooter bg-dark text-white text-center pt-2 pb-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="redesSociales" data-bs-toggle="dropdown" aria-expanded="false">Redes Sociales</button>
+        <ul class="dropdown-menu main__bootFooter_redes bg-dark text-white text-center pt-2 pb-2" aria-labelledby="redesSociales">
+
+            <!-- EN CADA ICONO DE RED SOCIAL, LE GENERÉ UN BEM PARA CAMBIAR EL COLOR CON HOVER -->
+
+            <a href="https://es-la.facebook.com/"><i class="fab fa-facebook main__bootFooter__redes--fb"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube main__bootFooter__redes--yt"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram main__bootFooter__redes--ig"></i></a>     
+        </ul>
+    </footer>
+    
+    <!-- ACA PEGO SCRIPT DE BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO -->
+    <meta name="description" content="Adelaida Pâtisserie, contactenos. Nos comunicaremos con usted a la brevedad">
+    <meta name="keywords" content="adelaida, contacto, recetas, dulce, salado, comentarios">
+
+    <!-- ACA PEGO SCRIPT DE FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/8e3afbb123.js" crossorigin="anonymous"></script>
+
+    <!-- AGREGO LAS FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=WindSong&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- CSS DE BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- LINK DEL CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- TITULO DE LA PAGINA -->
+    <title>Adelaida Pâtisserie / Contacto</title>
+
+</head>
+<body id="contacto">
+
+    <!-- EL HEADER ES EL MISMO QUE EL DE INDEX -->
+
+    <header class="conteiner-fluid header">
+
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light shadow-sm haeder__menu">
+            <div class="container m-0 header__menu__logo">
+                <img src="../Multimedia/IMG/AdelaidaLogo.jpg" alt="AdelaidaLogo"
+                    class="d-inline-block align-middle mr-2 header__menu__adelaidaLogo">
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMenu"
+                    aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler-icon"><span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div id="navBarMenu" class="collapse navbar-collapse header__menu__alineado">
+                    <ul class="navbar-nav me-auto mb-lg-0 align-items-end">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Pages/quien_soy.html">Quien Soy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Pages/salado.html">Salado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Pages/dulce.html">Dulce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bolder text-decoration-underline text-primary header__menu__alineado--contacto" href="../Pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ARRANCA EL MAIL DE LA PAGINA -->
+
+    <main class="main mainContacto conteiner-fluid">
+        
+        <section class="main__tituloAdelaida">
+            <p>El placer de lo dulce y la satisfacción de lo salado.</p>
+        </section>
+
+        <h3>Muchas gracias por visitar mi página de repostería</h3>
+
+        <section class="mainContacto__contenedor"> <!-- GENERO SECCIONES Y DIVS PARA MANJEARLOS MEJOR EN CSS-->
+            <div class="row m-0">
+                <div class="mainContacto__contenedor__detalle col-lg-5 col-md-5">
+                    <p>En esta sección, podrá:</p>
+                    <br>
+                    <ul>    <!-- A ESTA LISTA LE VOY A SACAR LAS VIÑETAS Y LES PONGO UNA IMAGEN -->
+                        <li>Realizar un pedido por algo SALADO</li>
+                        <li>Realizar un pedido por algo DULCE</li>
+                        <li>Envirme una receta que quisier que le prepare</li>
+                        <li>Hacerme los comentarios que usted quiera</li>
+                    </ul>
+
+                    <br><p>No se olvide de ingresar su EMAIL y su TELÉFONO para que pueda comuncarque con usted.</p><br>
+
+                    <div class="mainContacto__contenedor__ejemplo"> <!-- A ESTA LISTA LE VOY A CAMBIAR DE FORMA LA VIÑETA -->
+                        <ul>
+                            <li>En menos de 48hs recibirá una respuesta</li>
+                            <li>Estamos trabajando para llevarle nuestra mejor atención</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            <!-- ARRANCA EL FORMULARIO QUE LO VOY A HACER DE MANERA DIFERENTE, "DESORDENADO" -->
+
+                <div class="conteiner mainContacto__contenedor__formulario col-lg-7 col-md-7"> <!-- Genero el Formulario de contacto -->
+                    
+                    <form action="Formulario_de_Consulta"> 
+                        <div class="row p-2">
+
+                            <div class="mb-2 col-12 col-md-6 col-lg-6">
+                                <label for="NombreInput" class="form-label text-light">Nombre</label>
+                                <input type="Nombre" class="form-control" id="NombreInput" placeholder="Ingrese su nombre">
+                            </div>
+
+                            <div class="mb-2 col-12 col-md-6 col-lg-6">
+                                <label for="ApellidoInput" class="form-label text-light">Apellido</label>
+                                <input type="Apellido" class="form-control" id="ApellidoInput" placeholder="Ingrese su apellido">
+                            </div>
+
+                            <div class="mb-2 col-12 col-md-6 col-lg-6">
+                                <label for="emailInput" class="form-label text-light">Su correo</label>
+                                <input type="Email" class="form-control" id="emailInput" placeholder="ingrese_su@email">
+                            </div>
+
+                            <div class="mb-2 col-12 col-md-6 col-lg-6">
+                                <label for="celularInput" class="form-label text-light">Celular</label>
+                                <input type="Celular" class="form-control" id="celularInput" placeholder="+54 9 (cod.area) número">
+                            </div>
+
+                            <div class="mt-2 mb-2 col-12"> 
+                                <label class="form-label text-light">Residencia</label>
+                                <select class="form-select" aria-label="barrio">
+                                    <option selected disabled value>Indique su barrio</option>
+                                    <option value="Agronomia">Agronomia</option>
+                                    <option value="Almagro">Almagro</option>
+                                    <option value="Balvanera">Balvanera</option>
+                                    <option value="Barracas">Barracas</option>
+                                    <option value="Belgrano">Belgrano</option>
+                                    <option value="Boedo">Boedo</option>
+                                    <option value="Chacarita">Chacarita</option>
+                                    <option value="Coghlan">Coghlan</option>
+                                    <option value="Colegiales">Colegiales</option>
+                                    <option value="Constitución">Constitución</option>
+                                    <option value="Flores">Flores</option>
+                                    <option value="Floresta">Floresta</option>
+                                    <option value="La Boca">La Boca</option>
+                                    <option value="La Paternal">La Paternal</option>
+                                    <option value="Liniers">Liniers</option>
+                                    <option value="Mataderos">Mataderos</option>
+                                    <option value="Monte Castro">Monte Castro</option>
+                                    <option value="Monserrat">Monserrat</option>
+                                    <option value="Nueva Pompeya">Nueva Pompeya</option>
+                                    <option value="Núñez">Núñez</option>
+                                    <option value="Palermo">Palermo</option>
+                                    <option value="Parque Avellaneda">Parque Avellaneda</option>
+                                    <option value="Parque Chacabuco">Parque Chacabuco</option>
+                                    <option value="Parque Chas">Parque Chas</option>
+                                    <option value="Parque Patricios">Parque Patricios</option>
+                                    <option value="Puerto Madero">Puerto Madero</option>
+                                    <option value="Recoleta">Recoleta</option>
+                                    <option value="Retiro">Retiro</option>
+                                    <option value="Saavedra">Saavedra</option>
+                                    <option value="San Cristóbal">San Cristóbal</option>
+                                    <option value="San Nicolás">San Nicolás</option>
+                                    <option value="San Telmo">San Telmo</option>
+                                    <option value="Vélez Sársfield">Vélez Sársfield</option>
+                                    <option value="Versalles">Versalles</option>
+                                    <option value="Villa Crespo">Villa Crespo</option>
+                                    <option value="Villa del Parque">Villa del Parque</option>
+                                    <option value="Villa Devoto">Villa Devoto</option>
+                                    <option value="Villa General Mitre">Villa General Mitre</option>
+                                    <option value="Villa Lugano">Villa Lugano</option>
+                                    <option value="Villa Luro">Villa Luro</option>
+                                    <option value="Villa Ortúzar">Villa Ortúzar</option>
+                                    <option value="Villa Pueyrredón">Villa Pueyrredón</option>
+                                    <option value="Villa Real">Villa Real</option>
+                                    <option value="Villa Riachuelo">Villa Riachuelo</option>
+                                    <option value="Villa Santa Rita">Villa Santa Rita</option>
+                                    <option value="Villa Soldati">Villa Soldati</option>
+                                    <option value="Villa Urquiza">Villa Urquiza</option>    
+                                </select>
+                            </div>
+                        </div> 
+
+                        <!-- EN ESTE DIV, SEPARO LA SECCION DE ENVIAR LA INFORMACION DE CONSULTA PARA HACERLO DISTINTO -->
+
+                        <div class="row">
+
+                            <div class="mainContacto__contenedor__formulario__seleccionUsuario ps-5 pb-4 col-md-4 col-lg-3">
+                                <div>
+                                    <input type="radio" id="seleccionSalado" name="r-igual"> <!--CONTACTO POR SALADO-->
+                                    <label for="seleccionSalado" class="labelRadio">Salado</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="seleccionDulce" name="r-igual"> <!--CONTACTO POR DULCE-->
+                                    <label for="seleccionDulce">Dulce</label> 
+                                </div>
+                                <div>
+                                    <input type="radio" id="seleccionReceta" name="r-igual"> <!--CONTACTO POR RECETA-->
+                                    <label for="seleccionReceta">Receta</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="seleccionComentarios" name="r-igual"> <!--CONTACTO POR COMENTARIO-->
+                                    <label for="seleccionComentarios">Cometarios</label>
+                                </div>
+                            </div>
+                                
+                            <div class="mainContacto__contenedor__formulario__seleccionUsuario__comentario col-md-8 col-lg-9">
+                                <div>
+                                    <textarea name="cuadroConsulta" id="cuadroConsulta" cols="40" rows="5" class="cuadroConsulta"></textarea>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="sendReset m-3"> <!-- LOS BOTONES CAMBIAN DE COLOR CUANDO PASA EL MOUSE POR ENCIMA-->
+                            <div class="">
+                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                <button class="btn btn-secondary" type="reset">Borrar todo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MISMO FOOTER DEL INDEX -->
+
+    <footer class="dropdown main__bootFooter bg-dark text-white text-center pt-2 pb-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="redesSociales" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Redes Sociales
+        </button>
+        <ul class="dropdown-menu main__bootFooter_redes bg-dark text-white text-center pt-2 pb-2" aria-labelledby="redesSociales">
+            <a href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>     
+        </ul>
+    </footer>
+    
+    <!-- ACA PEGO SCRIPT DE BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+#dulce{
+    background-image: url(../Multimedia/IMG/FondoDulce6.jpg); 
+    @include fondoPantalla;
+}
+
+/*EN DULCE HAGO LO MISMO QUE EN SALADO, PERO, AQUI TODAS LAS IMAGENES SON HORIZONTLES*/
+
+.mainDulce{
+    &__carrusel{
+        @media screen and (max-width: $pantallaChica){
+            display: block;
+        }
+        @media screen and (min-width: $pantallaMediana){
+            display: none;
+        }
+        &__superior{
+            width: 320px;
+            @media screen and (min-width: $pantallaMediana){
+                width: 500px;
+            }
+            & img {
+                @include imgCarrusel;
+
+                @media screen and (min-width: $pantallaMediana){
+                    width: 480px;
+                    height: 380px
+                }  
+            }
+            & h5{
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 10px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: $FontItalianno + 26px;
+                }  
+            }
+        }
+        &__inferior{
+            width: 320px;
+            @media screen and (min-width: $pantallaMediana){
+                width: 500px;
+            }
+            & img {
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
+                border: 2px solid white;
+
+                @media screen and (min-width: $pantallaMediana){
+                    width: 480px;
+                    height: 380px;
+                }  
+            }
+            & h5{
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 10px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: $FontItalianno + 26px;
+                }  
+            }
+        }
+    }
+
+    &__tarjetas{
+        @media screen and (max-width: $pantallaChica){
+            display: none;
+        }
+        @media screen and (min-width: $pantallaMediana){
+            display: block;
+        }
+        & img{
+            @include imgHorizontales;
+            @media screen and (min-width: $pantallaGrande){
+                width: 230px;
+                height: 170px;
+            }
+        }
+        & img:hover{
+            animation: tada;
+            animation-duration: 1s;
+
+
+        }
+        & p{
+            @include textoDulceSalado;
+            @media screen and (min-width: $pantallaMediana){
+                font-size: 28px;
+            }
+            @media screen and (min-width: $pantallaGrande){
+                font-size: 38px;
+            }  
+        }
+        & p:hover{
+            transform:scale(1.5);
+        }
+    }
+}

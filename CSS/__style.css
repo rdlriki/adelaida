@@ -1,0 +1,1779 @@
+/* RESET DE LAS PROPIEDADES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*     font-size: 62.5%; /*EQUIVALE A 10px*/
+ *}
+
+/* ESTABLEZCO FONDO DE PANTALLA PARA EL HOME */
+#index{
+    background-image: url(../Multimedia/IMG/FondoDulce1.jpg); 
+    min-height: 650px;
+    background-size:cover;  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER*/
+    background-position: center;    /*CENTRADA*/
+    background-repeat: no-repeat;   /*SIN REPETIR*/
+}
+
+
+
+/* DEFINO TAMAÑO DEL FOOTER */
+.bootFooter {
+    height: 8vh;
+}
+
+/* LE DOY COLOR Y TAMAÑO A LOS ICONOS DE LAS REDES SOCIALES */
+.bootRedes a i {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* GENERO ANIMACION PARA LOS ICONOS DENTRO DEL FOOTER */
+.bootRedes a i:hover {
+    color: rgb(43, 134, 215);
+}
+
+/* LA INTENCION ACA ES QUE, CUANDO LA PANTALLA SEA CHICA, HAYA UN CARRUSEL Y NO COLUMAS */
+@media screen and (max-width: 576px){
+    .columnas{
+        display: none;  /* APAGO LAS COLUMNAS */
+    }
+    .carrusel{
+        display: block; /* HAGO VISIBLE EL CARRUSEL */
+    }
+
+    /* LE DOY TAMAÑO Y BORDES A LAS IMAGENES DEL CARRUSEL */
+    .carrusel .carousel-inner img{
+        width: 300px;
+        height: 190px;
+        margin: auto;
+        border-radius: 5px;
+        border: 1px solid white;
+    }
+
+    /* IDEM CON LAS LETRAS */
+    .carrusel .carousel-inner .carruselTexto{
+        font-weight: bolder;
+        color: white;
+        text-shadow: 2px 1px black;
+    }
+
+    /* LE DOY BORDE Y RADIO A LA FOTO DENTRO DE LA TARJETA QUE HAY DENTRO DEL BLOQUE CARRUSEL */
+    .carrusel .tarjeta img{
+        height: auto;
+        border-radius: 5px;;
+        border: 1px solid white;
+    }
+}
+
+/* CUANDO SALGO DE TAMAÑO CELULAR, DESACTIVO CARRUSEL Y ACTIVO EL BLOQUE */
+@media screen and (min-width: 577px){
+    .carrusel{
+        display: none;  /* APAGO EL CARRUSEL */
+    }
+    .columnas{
+        display: block; /* ACTIVO LAS COLUMNAS */
+    }
+
+    /* ESTILO A LAS IMAGENES  Y LUEGO AL TEXTO */
+    .columnas .tarjeta img{
+        border-radius: 5px;
+        border: 1px solid white;
+    }
+    .columnas .card .cardTexto{
+        font-weight: bolder;
+        color: white;
+        font-size: 16px;
+        text-shadow: 2px 1px black;
+    }
+
+}
+
+
+/* EL LOGO ESTARA EN TODAS LAS PAGINAS */
+.adelaidaLogo{
+    align-items: center;
+/*     height: 55px;
+ */    width: 150px;
+    border: 1px solid black;
+    margin-left: 2px;
+    background-color: white;
+}
+
+/* DEFINO ELTAMAÑO DELBLOQUE DONDE IRA EL LOGO EN LA PANTALLA MAS CHICA */
+.adelaidaLogo img{
+    width: 150px;
+    height: 50px;
+}
+
+/* ANIMACION AL PASAR EL MOUSE POR EL LOGO */
+.adelaidaLogo img:hover{
+    animation: heartBeat;
+    animation-duration: 2s;
+}
+
+/* EL MENU CAMBIARA DE TAMAÑOS DE LETRA Y DE FORMA */
+.menuNavegacion{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* LE SACO EL ESTILO AL MENU Y LO ALINEO */
+.menuNavegacion nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+/* COLOCO EN LINEA LOS LIST ITEMS Y LE DOY BORDE */
+.menuNavegacion nav ul li {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/*GENERO BOTONES*/
+.menuNavegacion nav ul li a{
+    display: inline-block;
+    text-decoration: none;  
+    background: white;
+    color:black;
+    font-size: 8px;
+    border-radius: 5px;
+    padding: 7px 10px 7px 8px;
+    transition: 0.3s ease-in-out;
+}
+
+/* ANIMACION CUANDO PASE EL MOUSE POR ENCIMA */
+.menuNavegacion nav ul li a:hover{
+    background-color: black;
+    color: white;
+    border:1px solid grey;
+    font-weight: bold;
+    animation: heartBeat;
+    animation-duration: 1s;
+}
+
+/* OCULTO EL SUBMENU CUANDO NO PASO EL MOUSE POR EL CONTENEDOR */
+.menuNavegacion nav ul li ul{
+    display: none;
+    justify-content: flex-start;
+    position: absolute;
+    width: 0px;
+    margin-top: 1px;
+    vertical-align: middle;
+}
+
+/* CUANDO PASO EL MOUSE, APARECE EL SUBMENU EN FORMA DE BLOQUE CON ANIMACIN */
+.menuNavegacion nav ul li:hover ul{
+    display: flex;
+    margin-right: auto;
+    justify-content: flex-start;
+    animation: flipInX;
+    animation-duration: 2s;
+}
+
+/* GENERO EL SUBMENU */
+.menuNavegacion nav ul li ul li a{
+    background: white;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.menuNavegacion nav ul li ul li{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border:0px;
+    padding-top: 1px;
+}
+
+.menuNavegacion nav ul li ul a{
+    background-color: white;
+}
+
+/*TAMAÑO Y ALINEACION DE LOS ICONOS*/
+.menuNavegacion nav ul li ul li img{
+    height: auto;
+    width: 10px;
+    vertical-align: middle;
+    margin: 1px;
+}
+
+
+/*ESTILO DEL TITULO DE LA PAGINA*/
+.tituloAdelaida{ /*Cambio téxto y tamño a los titulos h1*/
+    font-family: 'Italianno', cursive;
+   /*  color: rgb(56 180 168) ; */
+    color: #38b4a8;
+    background-color: white;
+    opacity: 90%;
+    font-weight: bolder;
+}
+
+/*ANCHO DE LAS FOTOS, AGREGO COLOR DE BORDE Y RADIO*/
+.fotosPrincipales img{
+    border: 1px solid;
+    border-color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: auto;
+    width:230px;
+}
+
+/*ESTILO A LA FOTO*/
+.fotosPrincipales .contenidoMultimedia .fotoMari{
+    border: 1px solid;
+    border-color: black;
+    height: 320px;
+    width:auto;
+    border-radius: 20px;
+}
+
+/* TAMAÑO DEL CUADRO DE AUDIO / CONTROL */
+.fotosPrincipales .contenidoMultimedia audio{
+    width: 320px;
+    height: 20px;
+    margin-top: 5px;   
+}
+
+/* ALINEO LA FOTO CON EL CONTROL */
+.fotosPrincipales .contenidoMultimedia{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*MODIFICACION DEL TITULO H3*/
+.presentacionIndex h3{ /*Cambio téxto y tamño a los titulos h3*/
+    font-family: 'Italianno', cursive;
+    color: rgb(179, 193, 27);
+    text-shadow: 1px 2px black; 
+    margin-left: 5px;
+    font-size: 30px;  
+}
+
+/*ESTILO DE LOS BLOQUES P EN INDEX*/
+.presentacionIndex p{
+    font-family: helvetica, Arial, sans-serif;
+    color: black;
+    text-shadow: 1px 2px yellow;
+    padding:10px;
+    font-size:12px;
+    text-align: justify;
+}
+
+/* LE DOY ESTILO AL TEXTO */
+.presentacionIndex .texto{
+    height: auto;
+    text-align: left;
+    font-size: 32px;
+    letter-spacing: 1px;   /*ACA LE DOY ESPACIO ENTRE CARACTERES*/
+    line-height:  20px;       /*ACA LE DOY ESPACIO ENTRE PARRAFOS*/
+    background-color: white;
+    opacity: 60%;
+    word-spacing: 1px;      /*ACA LE DOY ESPACIO ENTRE PALABRAS*/
+}
+
+/* CUANDO PASO EL MOUSE POR LAS IMAGENES TIENEN ANIMACIONES */
+.contenedorPasteleros img:hover{
+    animation: tada;
+    animation-duration: 1s;
+}   
+
+/* CUANDO PASO EL MOUSE POR LAS FOTOS DE TORTAS HORIZONTALES,TIENE ANIMACION */
+.horizontal:hover{
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+/* IDEM PERO EN LAS VERTICALES */
+.vertical:hover{
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+
+/*ESPACIADO ENTRE LOS ICONOS*/
+.footer .redesSociales{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+/* AJUSTO LOS ICONOS DE LAS REDES SOCIALES */
+.footer .redesSociales a{
+    margin-right: 20px;
+}
+
+/*TAMAÑO Y ALINEACION DE LOS ICONOS*/
+.footer .redesSociales img{
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* LE DOY UNA ANIMACION CUANDO PASA EL MOUSE POR ENCIMA DE LOS ICONOS */
+.footer .redesSociales img:hover{
+    animation: rubberBand;
+    animation-duration: 2s;
+}
+
+/*ESTILO DEL MENU DEL FOOTER*/
+.footer .menuNavegacionFooter{
+    display: flex;
+    align-items: center;
+}
+
+/*ROMPO ESTILO DEL MENU*/
+.footer .menuNavegacionFooter ul{
+    list-style: none;
+    display: flex;
+}
+
+/*QUE LOS ITEMS SEAN HORIZONTALES*/
+.footer .menuNavegacionFooter nav ul li{
+    justify-content: center;
+}
+
+/*GENERO BOTONES COLOR Y LETRA*/
+.footer .menuNavegacionFooter nav ul li a{
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    background: black;
+    color:white;
+    font-size: 8px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
+/*EFECTO PARA EL MOUSE*/
+.footer .menuNavegacionFooter nav ul li a:hover {
+    background: white;
+    color: black;
+    font-weight:bolder;
+    animation: flash;
+    animation-duration: 2s;
+} 
+
+/*MI NOMBRE COMO DISEÑADOR DE LA PAGINA ALINEADO*/
+.footer .firmaPropiertario{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*MODIFICO EL TAMAÑO DE LETRA Y COLOR*/
+.footer .firmaPropiertario p{
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+/* GENERO UNA ANIMACION PARA CUANDO SE PASE EL MOUSE POR MI NOMBRE EN LA PARTE INFERIOR DERECHA DE LA PANTALLA */
+@keyframes efectoFirma {
+    0% {
+        background-color: black;
+        width: 100px;
+        transform: rotate(2deg);
+    }
+    50%{
+        background-color: white;
+        color: black;
+        width: 150px;
+        transform: rotate(-2deg);
+        transform: scale(1.2)
+    }
+    100%{
+        background-color: black;
+        width: 100px;
+    }
+}
+
+/* CUANDO PASO EL MOUSE POR MI NOMBRE, SE LLAMA A LA ANIMACION */
+.footer .firmaPropiertario p:hover{
+    animation-name: efectoFirma;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*FONDO PARA PAGINA QUIEN SOY*/
+#quienSoy{
+    background-image: url(../Multimedia/IMG/Fondo\ Quien\ soy.jpg);
+    min-height: 480px;
+    background-size:cover;           /*NO POSICIONO LA IMAGEN*/
+    background-position: center;   /*LA AJUSTO AL INICIO*/
+    background-repeat: repeat;      /*LA REPITO*/
+}
+
+/* ESTILOS PARA EL TEXTO DE LA PAGINA QUIEN SOY */
+.contenedorQuienSoy .detalleQuienSoy{
+    font-family: Helvetica, Arial, sans-serif;
+    color:white;
+    font-size: 18px;
+    text-shadow: 1px 1px black;
+    letter-spacing: 0px;    /* ACA REPITO ESPACIO ENTRE LETRAS, PARRAGOS Y PALABRAS*/
+    line-height: 18px;
+    word-spacing: 0px;
+    text-align: justify;    /*ACA JUSTIFICO EL PARRAFO*/
+    padding: 5px 10px 5px 10px;
+} 
+
+/* ROMPO LA ESTRUCTURA PARA ACOMODAR EL CONTENEDOR */
+.contenedorQuienSoy .videoIag{
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DOY TAMA;O A LA IMAGEN DEL LOGO DEL IAG */
+.contenedorQuienSoy .videoIag img{
+    width: 80px;
+    height: auto;
+    background-color: white;
+    opacity: 60%;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+/* TAMAÑO DEL VIDEO */
+.contenedorQuienSoy .videoIag iframe{
+    width: 280px;
+    height: 180px;
+    border: 2px solid black;
+    box-shadow: 1px 1px white;
+}
+
+/* ESTILO DEL TITULO H3 */
+.footerQuienSoy h3{
+    font: oblique;
+    color: rgb(50, 160, 220);
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px white; 
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+/* TEXTO DETALLES DE LOS PASTELEROS */
+.contenedorPasteleros p{
+    text-align: justify;
+    font-family: helvetica,arial,sans-serif;
+    color: yellow;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-size: 10px;
+    padding: 0 5px 0 5px;
+    margin-bottom: 5px;
+}
+
+/* DOY ESTILO A LOS NOMBRES DE LOS PASTELEROS */
+.footerQuienSoy .contenedorPasteleros .negrita{
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: yellow;
+    text-shadow: 1px 1px black;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* PAGINA SALADO */
+#salado{
+    background-image: url(../Multimedia/IMG/FondoPan2.jpg);
+    min-height: 480px;
+    background-size: cover;     /*PONGO COVER PARA QUE LA IMAGEN OCUPE TODA LA PANTALLA*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ESTILO AL CONETENEDOR */
+.contenedorSalado p{
+    text-align: center;
+    font-family: 'Italianno', cursive;
+    font-weight: bold;
+    text-transform: capitalize; /*TRANSFORMO EL TEXTO*/
+    color: rgb(3 142 184);
+}
+
+/* PAGINA DULCE */
+#dulce{
+    background-image: url(../Multimedia/IMG/FondoDulce6.jpg); 
+    min-height: 480px;
+    background-size: cover;   
+    background-position: center;    /*LA CENTRO*/
+    background-repeat:no-repeat;    /*NO LA REPITO*/
+}
+
+/* ESTILO DEL TEXTO DENTRO DE CONTENEDOR DULCE */
+.contenedorDulce p{
+    text-align: center;
+    font-family: 'Italianno', cursive;
+    font-weight: bold;
+    text-transform: capitalize; /*TRANSFORMO EL TEXTO*/
+    color: rgb(3 142 184);
+}
+
+/* PAGINA CONTACTO */
+#contacto{
+    background-image: url(../Multimedia/IMG/Contactenos1.jpg);
+    min-height: 480px;
+    background-size: cover;     /*ESTA IMAGEN LA DEJO GRANDE*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* TITULO QUE SE LEE EN LA PAGINA CONTACTO */
+.mainContacto h3{ /*Cambio téxto y tamño a los titulos h3*/
+    font-family: 'Italianno', cursive;
+    color: lightgreen;
+}
+
+/* DOY ESTILO AL INTERIOR DE DETALLE */
+.contenedorContacto .detalle{
+    font-family: helvetica, arial, sans-serif;
+    background-color: white;
+    opacity: 90%;
+}
+
+/*ACA CAMBIO EL TIPO DE LETRA A ITALICA*/
+.contenedorContacto .detalleEjemplo{
+    font-style: italic; 
+}
+
+/* CAMBIO LA VIÑETA DE LA LISTA PARA UTILIZAR UNA IMAGEN */
+.contenedorContacto .detalle ul li{
+    list-style: url(../Multimedia/IMG/comprobar.png); /*CAMBIO LA VIÑETA*/
+    list-style-position: inside;    /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+    align-items: center;
+}
+
+/* CAMBIO EL ESTILO DE LA SEGUNDA LISTA */
+.contenedorContacto .detalleEjemplo ul li{
+    list-style: circle;     /*CAMBIO LA VIÑETA A CIRCULO*/
+    list-style-position: inside;    /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+}
+
+/* DOY ESTILO AL CONTENEDOR FORMULARIO */
+.contenedorContacto .formulario{
+    font-family: helvetica, arial, sans-serif;
+    background-color: white;
+    opacity: 90%;
+}
+
+/*CAMBIO DE TAMAÑO Y MARGENES DE LAS ETIQUETAS*/
+.contenedorContacto .formulario .ingresar label{
+    font-family: helvetica, arial, sans-serif;
+}
+
+/* CAMBIO ESTILO DE LOS CHECBOX */
+.contenedorContacto .formulario .ingresar .checkBox input{
+    display: inline;
+    vertical-align: middle;
+}
+
+/* ALINEO EL CONTENIDO DE LABEL */
+.contenedorContacto .formulario .ingresar .checkBox label{
+    vertical-align: middle;
+}
+
+/* DOY ESTILO DE LETRA AL CUADRO DE CONSULTA */
+.contenedorContacto .formulario .seleccionUsuario .cuadroConsulta{
+    font-family: helvetica, arial, sans-serif;
+}
+
+
+
+/* ***********ACA ARRANCA EL GRID*********** /
+
+/* PARA LAS PANTALLAS CHICAS, MENORES A 768 */
+/* MUESTRO LAS FOTOS EN FILAS CENTRADAS */
+
+@media screen and (max-width: 767px){
+    /* CAMBIO DE TAMAÑO EL HEADER */
+    .gridHeader{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        justify-items: center;
+        background-image: linear-gradient(to right, rgb(81, 74, 14), rgb(143, 130, 14));  
+        padding: 5px;
+    }
+
+    /* MODIFICO EL MENU DE NAVEGACION */
+    .menuNavegacion{    
+        display: flex;
+        margin-top: 5px;
+        height: 40px;
+        align-items: flex-start;
+    }
+
+    /* CAMBIO DE TAMAÑO EL TITULO H1 */
+    .tituloAdelaida p{ /*Cambio téxto y tamño a los titulos h1*/
+        text-shadow: 1px 1px black;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+
+    /* PARA HOME, PONGO LAS FOTOS EN GRILLA FILAS */
+    .gridFotosPrincipales{
+        display: grid;
+        grid-template-rows: repeat( 1,auto);
+        row-gap: 5px;
+        justify-items: center;
+    }
+
+    /* PARA QUIEN SOY, PONGO LA ESTRUCTURA EN GRILLA DE FILAS */
+    .contenedorQuienSoy{
+        display: grid;
+        grid-template-rows: repear(2,auto);
+        row-gap: 5px;
+        justify-items: center;
+    }
+
+    /* EN LA SECCION DE LOS PASTELEROS, LO PONGO EN GRILLA FILAS */
+    .contenedorPasteleros{
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        row-gap: 5px;
+    }
+
+    /* CAMBIO TAMAÑO DE LAS IMAGENES */
+    .contenedorPasteleros img{
+        height: 180px;
+        border: 1px solid white;
+        display: flex;
+        margin:auto;
+    }
+
+    /* PARA SALADO, PONGO LA ESTRUCTURA EN GRILLAS FILAS */
+    .contenedorSalado {
+        display: grid;
+        grid-template-rows: repeat(6, auto) ;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    /* DOY ESTILO AL TEXTO */
+    .contenedorSalado p{
+        margin-top: 5px; 
+        font-size: 28px;
+        text-shadow: 1px 1px white;
+    }
+
+    /* DEFINO TAMAÑO DE LAS FOTOS HORIZONTALES */
+    .horizontal{
+        width: 250px;
+        height: 150px;
+        border: 1px solid white;
+        box-shadow: 1px 1px gray;
+    }
+    
+    /* IDEM VERTICALES */
+    .vertical{
+        height: 300px;
+        width: auto;
+        border: 1px solid white;
+        box-shadow: 1px 1px grey;
+    }
+    
+    /* EN LA PAGINA DULCE, PONGO TODO EN GRILLA FILAS */
+    .contenedorDulce{
+        display: grid;
+        grid-template-rows: repeat(6, auto) ;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    /* ESTILO DEL TEXTO DENTRO DE ELLO */
+    .contenedorDulce p{
+        margin-top: 5px; 
+        font-size: 28px;
+        text-shadow: 1px 1px white;
+    }
+
+    /* AL FORMULARIO LO HAGO GRILLA FILAS */
+    .formulario .ingresar{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .mainContacto h3{ /*Cambio téxto y tamño a los titulos h3*/
+        text-shadow: 1px 1px black;
+        text-align: center;
+        font-size: 23px;    
+    }
+    
+    /* ESTILO DEL INTERIOR DE DETALLE */
+    .contenedorContacto .detalle{
+        font-size: 14px;
+        margin:5px;
+        padding: 10px;
+    }
+    
+    /* AJUSTO LAS VIÑETAS */
+    .contenedorContacto .detalle ul li{
+        padding-left: 40px;
+        line-height: 15px; 
+        font-size: 10px;
+    }
+    
+    /* IDEM */
+    .contenedorContacto .detalleEjemplo ul li{
+        padding-left: 15px;
+        line-height: 15px;
+        font-size: 10px;
+    }
+    
+    /* DEFINO EL TAMAÑO DEL FIELDSET */
+    .formulario .fieldSet{
+        margin-top: 5px;
+        padding: 2px 0px 5px 5px;
+        width: 280px;
+    }
+
+    /* DEFINO LA LETRA DE LA LEYENDA */
+    .formulario legend{
+        font-weight: bold;
+        font-style: italic;
+        font-size: 10px;
+        width: 220px;
+    }
+
+    /*DEFINO LA ETIQUETA */
+    .formulario legend form label{
+        font-weight: bold;
+        font-size: 14px;
+        font-style: italic;
+        padding-left: 15px;
+    }
+
+    /* DEFINO EL TAMAÑO DEL CONTENEDOR */
+    .formulario{
+        font-size: 28px;
+        margin: 5px;
+        height: 330px;
+    }
+    
+    /*ESPACIO ENTRE LINEAS*/
+    .formulario .ingresar{
+        line-height:15px;
+    }
+
+    /*MUEVO EL TEXTO*/
+    .formulario .ingresar p{
+        padding-left: 0px;
+        font-size: 10px;
+    }
+
+    /* DEFINO TAMAÑOS DE LOS CUADRO DE INGRESO */
+    .formulario .ingresar .cuadroIngreso{
+        width: 125px;
+        height: 18px;
+        font-size: 10px;
+        padding-left: 2px;
+        margin-bottom: 5px;
+    }
+
+    /* DEFINO EL TAMAÑO DE LAS LETRAS DEL DESPLEGABLE */
+    .formulario .ingresar .cuadroIngreso option{
+        font-size: 10px;
+        margin:0;
+        padding:0;
+    }
+    
+    /* DEFINO TAMAÑO DE LETRA */
+    .formulario .ingresar label{
+        font-size: 10px;
+    }
+    
+    /*AGRANDO DE TAMAÑO EL CHECKBOX Y LO ALINEO*/
+    .formulario .ingresar .checkBox input{
+        margin-left: 30px;
+        padding-left: 5x;
+        transform: scale(1.2);
+    }
+    
+    /*MODIFICO EL TAMAÑO DE LA LETRA DEL CHECKBOX*/
+    .formulario .ingresar .checkBox label{
+        font-size: 10px;
+    }
+    
+    /*ROMPO LA ESTRUCTURA DE LA SELECCION DEL USUARIO*/
+    .formulario .seleccionUsuario{
+        display: grid;
+        width: 280px;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(1,auto);
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    /*DEFINO EL ESPACIO*/
+    .formulario .seleccionUsuario .espacioComentario{
+        width: 70%;
+        height: auto;
+    }
+    
+    /*AGRANDO EL RADIO DE SELECCION*/
+    .formulario .seleccionUsuario .seleccionRadio{
+        margin-left: 50px;
+        padding-left: 20px;
+        transform: scale(1.2);
+        display: inline;
+    }
+    
+    /*CAMBIO FAMILIA Y TAMAÑO FUENTE*/
+    .formulario .seleccionUsuario .cuadroConsulta{
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    /*CAMBIO TAMAÑO Y COLOR DEL BOTON SEND RESET*/
+    .formulario .seleccionUsuario .sendReset{
+        display: flex;
+        flex-direction: row;
+        vertical-align: left;
+    }
+
+    /* ESTILO DE LOS BOTONES ENVIAR Y RESETEAR */
+    .formulario .seleccionUsuario .botonSendReset{
+        font-size: 8px;
+        font-weight: bold;
+        background-color: gray;
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    /*EFECTO AL PASAR EL MOUSE*/
+    .formulario .seleccionUsuario .botonSendReset:hover {
+        background: red;
+        color: white;
+        font-weight:bolder;
+    }
+    
+
+        /* CAMBIO LA FORMA DEL FOOTER */
+    .footer{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        row-gap: 5px;
+        justify-items: center;
+        margin-top: 10px;
+    }
+}
+
+
+/* ACA COMIENZO A MANEJAR LOS TAMAÑOS Y APARIENCIAS DE ACUERDO AL TAMAÑO DE PANTALLA */
+/*  768px   */
+
+@media screen and (min-width: 768px){
+    /* CAMBIO DE COLOR EL FONDO */
+    .gridHeader{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        background-image: linear-gradient(to right, rgb(143, 130, 14), khaki);
+        padding: 5px;
+    }
+
+    /* CAMBIO EL TAMAÑO DEL RECUADRO */
+    .adelaidaLogo{
+        display: flex;
+        justify-content: center;
+        width: 190px;
+        height: 65PX;
+    }
+
+    /* CAMBIO DE TAMAÑO LA FOTO */
+    .adelaidaLogo img{
+        width: 180px;
+        height: 60px;
+    }
+    
+    /* CAMBIO TAMAÑO LETRA DEL MENU DE NAVEGACION */
+    .menuNavegacion nav ul li a{
+        font-size: 12px;
+    }
+
+    /*TAMAÑO DE LOS ICONOS*/
+    .menuNavegacion nav ul li ul li img{
+        width: 15px;
+        height: auto;
+    } 
+
+    /* MODIFICO EL TITULO */
+    .tituloAdelaida p{ /*Cambio téxto y tamño a los titulos h1*/
+        text-shadow: 2px 1px black;
+        padding-left: 10px;
+        font-size: 46px;
+    }
+    
+    /* PASO EL GRID A COLUMNAS */
+    .gridFotosPrincipales{
+        display: grid;
+        justify-items: center;
+        justify-content: space-evenly;
+        grid-template-columns: repeat( 3, auto);
+        column-gap: 6px;
+    }
+    
+    /* MODIFICO EL TAMAÑO DE LAS FOTOS */
+    .fotosPrincipales img{
+        height: 150px;
+        width: auto;
+    }
+
+    /* MODIFICO TAMAÑO FOTO */
+    .fotosPrincipales .contenidoMultimedia .fotoMari{
+        height: 260px;
+        width:auto;
+        border-radius: 20px;
+    }
+
+    /* CAMBIO TAMAÑO DEL CONTROL DE AUDIO */
+    .fotosPrincipales .contenidoMultimedia audio{
+        width: 190px;
+        height: 25px; 
+        margin-top: 5px;
+    }
+
+    /* TAMAÑO DEL TITULO H3 */
+    .presentacionIndex h3{ /*Cambio téxto y tamño a los titulos h3*/
+        margin-left: 10px;
+        font-size: 42px; 
+    }
+
+    /* MODIFICO EL TEXTO */
+    .presentacionIndex p{
+        padding:10px;
+        font-size:14px;
+    }
+
+    /* MOFICO EL ESTILO DEL TEXTO */
+    .presentacionIndex .texto{
+        text-align: justify;
+    }
+
+    /* PONGO AL FOOTER EN COLUMNAS */
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        column-gap: 5px;
+        margin: 5px;
+    }
+
+    /*TAMAÑO Y ALINEACION DE LOS ICONOS*/
+    .footer .redesSociales img{
+        width: 25px;
+    }
+
+    /*ESTILO DEL MENU DEL FOOTER*/
+    .footer .menuNavegacionFooter nav ul li a{
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 3px;
+    }
+
+    /* AL CONTENEDOR LO PONGO EN COLUMNAS */
+    .contenedorQuienSoy{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+    }
+
+    /* DOY ESTILO AL CONTENEDOR */
+    .contenedorQuienSoy .detalleQuienSoy{
+        font-size: 22px;
+        text-shadow: 1px 1px black;
+        letter-spacing: 1px;    /* ACA REPITO ESPACIO ENTRE LETRAS, PARRAGOS Y PALABRAS*/
+        line-height: 22px;
+        word-spacing: 1px;
+        text-align: justify;    /*ACA JUSTIFICO EL PARRAFO*/
+    } 
+    
+    /* ROMPRO ESTRUCTURA */
+    .contenedorQuienSoy .videoIag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 5px 0 5px;
+    }
+
+    /* ESTILO AL LOGO DEL IAG */
+    .contenedorQuienSoy .videoIag img{
+        justify-items: top;
+        width: 100px;
+    }
+    
+    /* TAMAÑO DEL VIDEO */
+    .contenedorQuienSoy .videoIag iframe{
+        width: 320px;
+        height: 220px;
+        border: 2px solid black;
+        box-shadow: 2px 2px white;
+    }
+    
+    /* TITULO DEL FOOTER DE QUIEN SOY */
+    .footerQuienSoy h3{
+        font-size: 24px;
+        text-shadow: 1px 1px black; 
+        margin-left: 10px 0px 10px 10px;
+        border-top: 2px solid white;
+    }
+    
+
+    /* UTILIZO GRID AREA PARA DISTRIBUIR A LOS PASTELEROS */
+    .contenedorPasteleros{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas:    "pedroLambertini     osvaldoGross"
+                                "annaOlson          damianBetular";
+        row-gap: 5px;
+    }
+
+    /* ASIGNO LOS LUGARES DE LOS 4 PASTELEROS SEGUN EL GRID */
+    .contenedorPasteleros .pedroLambertini{
+        grid-area: pedroLambertini;
+    }
+    
+    .contenedorPasteleros .osvaldoGross{
+        grid-area: osvaldoGross;
+    }
+
+    .contenedorPasteleros .annaOlson{
+        grid-area: annaOlson;
+    }
+
+    .contenedorPasteleros .damianBetular{
+        grid-area: damianBetular;
+    }
+
+    /* DEFINO LOS TAMAÑOS */
+    .contenedorPasteleros img{
+        height: 250px;
+        border: 2px solid white;
+        display: flex;
+        margin:auto;
+    }
+
+    /* CAMBIO ESTILO DEL TEXTO DE LOS PASTELEROS */
+    .contenedorPasteleros p{
+        text-align: justify;
+        font-family: helvetica,arial,sans-serif;
+        color: yellow;
+        text-align: center;
+        text-shadow: 1px 1px black;
+        font-size: 12px;
+        padding: 0 5px 0 5px;
+        margin-top: 5px;
+    }
+    
+    /* CAMBIO TAMAÑO NEGRITA DELOS PASTELEROS */
+    .footerQuienSoy .contenedorPasteleros .negrita{
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: yellow;
+        text-shadow: 1px 1px black;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    
+
+    /* GENERO LA GRILLA PARA LAS FOTOS SALADAS */
+    .contenedorSalado {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:    "cremona        palmeritas" 
+                                "panCasero      trenzaJudia" 
+                                "facturas       delicatessen";
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    /* UBICO LAS FOTOS DE ACUERDO A SU POSICION */
+    .contenedorSalado .cremona{
+        grid-area: cremona;
+    }
+
+    .contenedorSalado .palmeritas{
+        grid-area: palmeritas;    
+    }
+
+    .contenedorSalado .panCasero{
+        grid-area: panCasero;
+    }
+
+    .contenedorSalado .trenzaJudia{
+        grid-area: trenzaJudia;
+    }
+
+    .contenedorSalado .facturas{
+        grid-area: facturas;
+    }
+
+    .contenedorSalado .delicatessen{
+        grid-area: delicatessen;
+    }
+
+    /* MODIFICO TEXTO */
+    .contenedorSalado p{
+        margin-top: 5px; 
+        font-size: 48px;
+        text-shadow: 2px 1px white;
+    }
+
+    /* MODIFICO LAS FOTOS HORIZONTALES */
+    .horizontal{
+        width: 320px;
+        height: 220px;
+        border: 2px solid white;
+        box-shadow: 2px 1px gray;
+    }
+    
+    /* IDEM VERTICAL */
+    .vertical{
+        height: 360px;
+        width: auto;
+        border: 1px solid white;
+        box-shadow: 2px 1px grey;
+    }
+
+    /* GENERO EL GRID DE LOS DULCES UTILIZO GRID AREA */
+    .contenedorDulce {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:    "cremosoChocolate   limaLimon" 
+                                "tortaArrolado      masaBomba"
+                                "vainillas          masitas"
+                                "tiramisu           opera";
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    /* UBICO LOS LUGARES DE LAS TORTAS SEGUN EL GRID */
+    .contenedorDulce .cremosoChocolate{
+        grid-area: cremosoChocolate;
+    }
+
+    .contenedorDulce .limaLimon{
+        grid-area: limaLimon;    
+    }
+
+    .contenedorDulce .tortaArrolado{
+        grid-area: tortaArrolado;
+    }
+
+    .contenedorDulce .masaBomba{
+        grid-area: masaBomba;
+    }
+
+    .contenedorDulce .vainillas{
+        grid-area: vainillas;
+    }
+
+    .contenedorDulce .masitas{
+        grid-area: masitas;
+    }
+
+    .contenedorDulce .tiramisu{
+        grid-area: tiramisu;
+    }
+
+    .contenedorDulce .opera{
+        grid-area: opera;
+    }
+
+    /* CAMBIO TEXTO DEL CONTENEDOR */
+    .contenedorDulce p{
+    margin-top: 5px; 
+    font-size: 48px;
+    text-shadow: 2px 1px white;
+    }
+
+    /* GENERO EL GRID PARA EL CONTACTO. UTILIZO UNA ESTRUCTURA GRID ADENTRO DE OTRO GRID */
+    .contenedorContacto{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: auto;
+    }
+
+    /* HAGO UN GRID PARA EL AREA DE LOS DATOS DE CONTACTO */
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    /* HAGOUN GRID PARALA PARTE DE INGRESO DE COMENTARIOS */
+    .formulario .ingresar{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .mainContacto h3{ /*Cambio téxto y tamño a los titulos h3*/
+        text-shadow: 1px 1px black;
+        text-align: center;
+        font-size: 52px;    
+    }
+    
+    /* CAMBIO EL TAMAÑO DEL TEXTO */
+    .contenedorContacto .detalle{
+        font-size: 14px;
+        margin:5px;
+        padding: 10px;
+    }
+    
+    /* CAMBIO LAS VIÑETAS */
+    .contenedorContacto .detalle ul li{
+        padding-left: 40px;
+        line-height: 15px; 
+        font-size: 10px;
+    }
+    
+    /* CAMBIO LAS VIÑETAS */
+    .contenedorContacto .detalleEjemplo ul li{
+        padding-left: 15px;
+        line-height: 15px;
+        font-size: 10px;
+    }
+    
+    /* DOY ESTILO AL FIELDSET */
+    .formulario .fieldSet{
+        margin-top: 5px;
+        padding: 2px 0px 5px 5px;
+        width: 280px;
+    }
+
+    /* DOY FORMA A LA LEYENDA */
+    .formulario legend{
+        font-size: 10px;
+        width: 280px;
+    }
+
+    /* CAMBIO EL TAMAÑO DE LA LETRA */
+    .formulario legend form label{
+        font-size: 16px;
+    }
+
+    /* CAMBIO TAMAÑO FORMULARIO */
+    .formulario{
+        font-size: 28px;
+        margin: 5px;
+        height: 330px;
+    }
+    
+    /*ESPACIO ENTRE LINEAS*/
+    .formulario .ingresar{
+        line-height:15px;
+    }
+
+    /* MODIFICO EL TEXTO */
+    .formulario .ingresar p{
+        padding-left: 0px;
+        font-size: 10px;
+    }
+
+    /* CAMBIO EL TAMAÑO DEL CUADRO DE INGRESO */
+    .formulario .ingresar .cuadroIngreso{
+        width: 160px;
+        height: 18px;
+        font-size: 10px;
+        padding-left: 2px;
+        margin-bottom: 5px;
+    }
+
+    /* MODIFICO EL TAMAÑO DE LETRA DE LAS OPCIONS DESPLEGABLES */
+    .formulario .ingresar .cuadroIngreso option{
+        font-size: 10px;
+        margin:0;
+        padding:0;
+    }
+    
+    /* CAMBIO TAMAÑO DE LA ETIQUETA */
+    .formulario .ingresar label{
+        font-size: 10px;
+    }
+    
+    /*AGRANDO DE TAMAÑO EL CHECKBOX Y LO ALINEO*/
+    .formulario .ingresar .checkBox input{
+        margin-left: 30px;
+        padding-left: 5x;
+        transform: scale(1.2);
+    }
+    
+    /*MODIFICO EL TAMAÑO DE LA LETRA DEL CHECKBOX*/
+    .formulario .ingresar .checkBox label{
+        font-size: 10px;
+    }
+    
+    /*ROMPO LA ESTRUCTURA DE LA SELECCION DEL USUARIO*/
+    .formulario .seleccionUsuario{
+        display: grid;
+        margin-top: 5px;
+        width: 280px;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(1,auto);
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    /*DEFINO EL ESPACIO*/
+    .formulario .seleccionUsuario .espacioComentario{
+        width: 70%;
+        height: auto;
+    }
+    
+    /*AGRANDO EL RADIO DE SELECCION*/
+    .formulario .seleccionUsuario .seleccionRadio{
+        margin-left: 50px;
+        padding-left: 20px;
+        transform: scale(1.2);
+        display: inline;
+    }
+    
+    /*CAMBIO FAMILIA Y TAMAÑO FUENTE*/
+    .formulario .seleccionUsuario .cuadroConsulta{
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    /*CAMBIO TAMAÑO Y COLOR DEL BOTON SEND RESET*/
+    .formulario .seleccionUsuario .sendReset{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* CAMBIO LOS BOTONES SEND RESET */
+    .formulario .seleccionUsuario .botonSendReset{
+        font-size: 8px;
+        font-weight: bold;
+        background-color: gray;
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    /*EFECTO AL PASAR EL MOUSE*/
+    .formulario .seleccionUsuario .botonSendReset:hover {
+        background: red;
+        color: white;
+        font-weight:bolder;
+    }
+}
+
+
+/* ACA COMIENZO A MANEJAR LOS TAMAÑOS Y APARIENCIAS DE ACUERDO AL TAMAÑO DE PANTALLA */
+/*  1024px   */
+@media screen and (min-width: 1024px){
+    /* MODIFICO EL HEADER */
+    .gridHeader{
+        grid-template-columns: 350px 1fr;
+        background-image:none;
+        background-color: khaki;
+        padding: 5px;
+    }
+
+    /* CAMBIO TAMAÑO EL RECUADRO DONDE VA EL LOGO */
+    .adelaidaLogo{
+        width: 330px;
+        height: 110px;
+        border: 3px solid black;
+        margin-left: 5px;
+        align-items: center;
+    }
+    
+    /* CAMBIO TAMAÑO DE LA IMAGEN DEL LOGO */
+    .adelaidaLogo img{
+        width: 300px;
+        height: auto;
+    }
+    
+    /* CAMBIO TAMAÑO LAS LETRAS DEL MENU */
+    .menuNavegacion nav ul li a{
+        font-size: 15px;
+    }
+
+    /*TAMAÑO Y ALINEACION DE LOS ICONOS*/
+    .menuNavegacion nav ul li ul li img{
+        width: 25px;
+    }
+
+    .tituloAdelaida p{ /*Cambio téxto y tamño a los titulos h1*/
+        text-shadow: 2px 2px black;
+        padding-left: 20px;
+        font-size: 68px;
+    }
+
+    /* CAMBIO LA FORMA DEL GRID */
+    .gridFotosPrincipales{
+        grid-template-columns: repeat( 3, auto);
+        justify-content: space-evenly;
+    }
+    
+    /* CAMBIO TAMAÑO DE LAS FOTOS */
+    .fotosPrincipales img{
+        height: 190px;
+        width:auto;
+    } 
+
+    /* CAMBIO TAMAÑO DE LA FOTO */
+    .fotosPrincipales .contenidoMultimedia .fotoMari{
+        height: 480px;
+        border-radius: 50px;
+    }
+
+    /* CENTRO EL CONTROL MULTIMEDIA */
+    .fotosPrincipales .contenidoMultimedia{
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* CAMBIO TAMAÑO BOTON MULTIMEDIA */
+    .fotosPrincipales .contenidoMultimedia audio{
+        width: 350px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    /* CAMBIO TAMAÑO EL TITULO H3 */
+    .presentacionIndex h3{ /*Cambio téxto y tamño a los titulos h3*/
+        font-size: 62px; 
+    }
+
+    /* CAMBIO TAMAÑO Y JUSTIFICACION DEL TEXTO */
+    .presentacionIndex p{
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    /* CAMBIO TAMAÑO DE LETRAS */
+    .presentacionIndex .texto{
+        font-size: 72px;
+    }
+    /*GENERO BOTONES COLOR Y LETRA*/
+    .footer .menuNavegacionFooter nav ul li a{
+        font-size: 10px;
+        border-radius: 10px;
+    }
+    /*MODIFICO EL TAMAÑO DE LETRA Y COLOR*/
+    .footer .firmaPropiertario p{
+        font-size: 10px;
+    }
+
+    /* CAMBIO TAMAÑOS DE LAS IMAGENES DEL FOOTER REDES SOCIALES */
+    .footer .redesSociales img{
+        width: 35px;
+    }
+
+    /* CAMBIO LA CONFIGURACION DEL GRID */
+    .contenedorQuienSoy{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5px;
+        justify-items: center;
+    }
+
+    /* CANBUI EL TEXTO DE QUIEN SOY */
+    .contenedorQuienSoy .detalleQuienSoy{
+        font-size: 24px;
+        text-shadow: 2px 2px black;
+        letter-spacing: 1px;    /* ACA REPITO ESPACIO ENTRE LETRAS, PARRAGOS Y PALABRAS*/
+        line-height: 25px;
+        text-align: justify;    /*ACA JUSTIFICO EL PARRAFO*/
+    } 
+    
+    /* CAMBIO TAMAÑO IMAGEN LOGO IAG */
+    .contenedorQuienSoy .videoIag img{
+        width: 100px;
+    }
+    
+    /* CAMBIO TAMAÑO DEL VIDEO */
+    .contenedorQuienSoy .videoIag iframe{
+        width: 320px;
+        height: 220px;
+        border: 2px solid black;
+        box-shadow: 2px 2px white;
+    }
+    
+    /* CAMBIO TAMAÑO DEL TITULO */
+    .footerQuienSoy h3{
+        font-size: 32px;
+        text-shadow: 1px 1px black; 
+        margin-left: 10px 0px 10px 10px;
+        border-top: 2px solid white;
+    }
+    
+
+    /* CAMBIO DISPOSICION DE LOS PASTELEROS */
+    .contenedorPasteleros{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: "pedroLambertini     osvaldoGross    annaOlson   damianBetular";
+        row-gap: 5px;
+    }
+
+    /* CAMBIO TAMAÑOS DE LAS IMAGENES DE LOS PASTELEROS */
+    .contenedorPasteleros img{
+        height: 250px;
+        border: 2px solid white;
+        display: flex;
+        margin:auto;
+    }
+
+    /* CAMBIO EL TEXTO DE LOS PASTELEROS */
+    .contenedorPasteleros p{
+        text-align: justify;
+        font-family: helvetica,arial,sans-serif;
+        color: yellow;
+        text-align: center;
+        text-shadow: 1px 2px black;
+        font-size: 14px;
+        padding: 0 5px 0 5px
+    }
+    
+    /* CAMBIO DE TAMAÑO LOS NOMBRES DE LOS PASTELEROS */
+    .footerQuienSoy .contenedorPasteleros .negrita{
+        font-size: 16px;
+    }
+
+    /* CAMBIO EL GRID DE LAS FOTOS SALADAS */
+    .contenedorSalado {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat (4, auto);
+        grid-template-areas:    "cremona        palmeritas      facturas    delicatessen" 
+                                "panCasero      trenzaJudia     facturas    delicatessen";
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+        align-items: center;    
+    }
+
+    /* LAS UBICO SEGUN EL AREA */
+    .contenedorSalado .cremona{
+        grid-area: cremona;
+    }
+
+    .contenedorSalado .palmeritas{
+        grid-area: palmeritas;    
+    }
+
+    .contenedorSalado .panCasero{
+        grid-area: panCasero;
+    }
+
+    .contenedorSalado .trenzaJudia{
+        grid-area: trenzaJudia;
+    }
+
+    .contenedorSalado .facturas{
+        grid-area: facturas;
+    }
+
+    .contenedorSalado .delicatessen{
+        grid-area: delicatessen;
+    }
+
+    /* CAMBIO EL TEXTO DE SALADO */
+    .contenedorSalado p{
+        margin-top: 5px; 
+        font-size: 58px;
+        text-shadow: 2px 1px white;
+    }
+
+    /* CAMBIO LAS FOTOS HORIZONTALES */
+    .horizontal{
+        width: 250px;
+        height: 150px;
+        border: 3px solid white;
+        box-shadow: 2px 2px gray;
+    }
+    
+    /* CAMBIO LAS FOTOS VERTICALES */
+    .vertical{
+        height: 325px;
+        width: auto;
+        border: 3px solid white;
+        box-shadow: 2px 2px gray;
+    }
+
+    /* CAMBIO EL GRID DE LAS FOTOS DULCES */
+    .contenedorDulce {
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas:    "cremosoChocolate   limaLimon   tortaArrolado   masaBomba" 
+                                "vainillas          masitas     tiramisu        opera";
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    /* UBICO LAS FOTOS SEGUN EL GRID */
+    .contenedorDulce .cremosoChocolate{
+        grid-area: cremosoChocolate;
+    }
+
+    .contenedorDulce .limaLimon{
+        grid-area: limaLimon;    
+    }
+
+    .contenedorDulce .tortaArrolado{
+        grid-area: tortaArrolado;
+    }
+
+    .contenedorDulce .masaBomba{
+        grid-area: masaBomba;
+    }
+
+    .contenedorDulce .vainillas{
+        grid-area: vainillas;
+    }
+
+    .contenedorDulce .masitas{
+        grid-area: masitas;
+    }
+
+    .contenedorDulce .tiramisu{
+        grid-area: tiramisu;
+    }
+
+    .contenedorDulce .opera{
+        grid-area: opera;
+    }
+
+    /* CAMBIO EL TAMAÑO DEL TITULO */
+    .mainContacto h3 {
+        text-shadow: 2px 2px black;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 72px;
+    }
+
+    /* SEPARACION DELCONTENEDOR */
+    .contenedorContacto {
+        justify-content: space-evenly;
+        height: 385px;
+        grid-template-rows: auto;
+    }
+
+    /* CAMBIO EL TEXTO DEL DETALLE */
+    .contenedorContacto .detalle {
+        font-size: 24px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    /* MODIFICO EL ESPACIO Y TAMAÑO DE LETRA DEL LISTADO */
+    .contenedorContacto .detalle ul li {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    /* TAMAÑO DE LA LETRA DE LA SEGUNDA VIÑETA */
+    .contenedorContacto .detalleEjemplo {
+        font-size: 24px;
+    }
+
+    /* MODIFICO LA GRILLA DEL CONTENEDOR DE FORMULARIOS */
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: auto;
+        justify-items: end;
+        font-size: 28px;
+        width: 480px;
+        height: auto;
+    }
+
+    /* CAMBIO TAMAÑO DEL FIELDSET */
+    .formulario .fieldSet {
+        width: 400px;
+        height: 190px;
+    }
+
+    /* CAMBIO LA LEYENDA */
+    .formulario legend {
+        font-size: 16px;
+    }
+
+    /* CAMBIO ESTRUCTURA DE INGRESAR */
+    .formulario .ingresar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* CAMBIO TAMAÑO DE LABEL */
+    .formulario .ingresar label {
+        font-size: 14px;
+    }
+
+    /* CAMBIO EL CUADRO DE INGRESO */
+    .formulario .ingresar .cuadroIngreso {
+        width: 250px;
+        height: 20px;
+        font-size: 12px;
+        padding-left: 5px;
+        margin-bottom: 7px;
+        margin-top: 5px;
+    }
+
+    /* MODIFICO EL TAMAÑO DEL TEXTO SI QUIERE RECIBIR NOVEDADES */
+    .formulario .ingresar .novedades{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    /* CANBIO TANAÑO DE ETIQUETA CHECKBOX */
+    .formulario .ingresar .checkBox label {
+        font-size: 12px;
+    }
+
+    /* TEXTO DENTRO DE INGRESAR */
+    .formulario .ingresar p {
+        padding-left: 5px;
+        font-size: 14px;
+    }
+
+}

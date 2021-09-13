@@ -1,0 +1,1057 @@
+@charset "UTF-8";
+#index {
+  background-image: url(../Multimedia/IMG/FondoDulce1.jpg);
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*hago un mixin del fodo de pantalla. Esto se repite en todos*/
+}
+
+/*Aca busco estilar el header que es comun a todos*/
+.header__menu__adelaidaLogo {
+  width: 150px;
+  border: 1px solid black;
+}
+
+.header__menu__menuAlineado ul {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header__menu__menuAlineado li {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 15px;
+}
+
+.header__menu__alineado ul li a:hover {
+  /*efecto de pasar el mouse por el menu*/
+  -webkit-animation: heartBeat;
+          animation: heartBeat;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  font-weight: bolder;
+}
+
+.main__tituloAdelaida {
+  font-family: "Italianno", cursive;
+  color: #38b4a8;
+  background-color: white;
+  opacity: 90%;
+  font-weight: bolder;
+}
+
+.main__tituloAdelaida p {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 576px) {
+  .main__tituloAdelaida p {
+    /*considero para cada resolucion*/
+    text-shadow: 1px 1px black;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .main__tituloAdelaida p {
+    text-shadow: 2px 1px black;
+    padding-left: 10px;
+    font-size: 46px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__tituloAdelaida p {
+    text-shadow: 2px 2px black;
+    padding-left: 20px;
+    font-size: 68px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main__columnas {
+    /*Cuando es pantalla chica, no se muestra las columnas*/
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .main__columnas {
+    /*Cuando es pantalla mediana, se muestran las columnas*/
+    display: block;
+  }
+  .main__columnas__tarjeta img {
+    border-radius: 5px;
+    border: 2px solid white;
+    height: 207px;
+    width: auto;
+  }
+  .main__columnas__tarjeta p {
+    font-weight: bolder;
+    color: white;
+    font-size: 16px;
+    text-shadow: 2px 1px black;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main__carrusel {
+    /*Cuando la pantalla es chica, se muestran en carrusel*/
+    display: block;
+  }
+  .main__carrusel__contenido img {
+    width: 300px;
+    height: 190px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  .main__carrusel__contenido h5, .main__carrusel__contenido p {
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 1px black;
+  }
+  .main__carrusel__contenido__tarjeta img {
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .main__carrusel {
+    /*Cuando la pantalla es mediana, se apaga el carrusel*/
+    display: none;
+  }
+}
+
+.presentacion {
+  /*Estilo la presentacion dependiendo la resolucion*/
+}
+
+.presentacion__titulo h3 {
+  font-family: "Italianno", cursive;
+  color: #b3c11b;
+  text-shadow: 1px 2px black;
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 577px) {
+  .presentacion__titulo h3 {
+    margin-left: 10px;
+    font-size: 42px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .presentacion__titulo h3 {
+    font-size: 62px;
+  }
+}
+
+.presentacion__texto {
+  /*Estilo el detalle dependiendo la resolucion*/
+  height: auto;
+  letter-spacing: 1px;
+  background-color: white;
+  opacity: 60%;
+}
+
+.presentacion__texto p {
+  font-family: helvetica, Arial, sans-serif;
+  color: black;
+  text-shadow: 1px 2px yellow;
+  padding: 5px;
+  font-size: 12px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 577px) {
+  .presentacion__texto p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .presentacion__texto p {
+    font-size: 16px;
+  }
+}
+
+.bootFooter {
+  /*estilo el footer*/
+  height: 9vh;
+}
+
+.bootFooter a {
+  color: white;
+  /*La letra del boron en texto blanco*/
+  font-size: 20px;
+  margin: 5px 2px 5px 2px;
+}
+
+/*Hago un heach para que los iconos tengan color blanco, ver VARS*/
+.main__bootFooter__redes--fb {
+  color: white;
+}
+
+.main__bootFooter__redes--yt {
+  color: white;
+}
+
+.main__bootFooter__redes--ig {
+  color: white;
+}
+
+/* REALIZO UN MAPA PARA HACER UN EACH PARA ASIGNAR HOVER A LOS COLORES DE LOS ICONOS DE LAS REDES SOCIALES, ver VARS*/
+.main__bootFooter__redes--fb:hover {
+  color: blue;
+}
+
+.main__bootFooter__redes--yt:hover {
+  color: red;
+}
+
+.main__bootFooter__redes--ig:hover {
+  color: orange;
+}
+
+#quienSoy {
+  background-image: url(../Multimedia/IMG/FondoQuienSoy.jpg);
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*GENERO UN CAMBIO EN EL COLOR DEL BOTON MAS..*/
+/*EL COLOR ES ROSA CON LETRAS NEGRAS */
+/*CON HOVER, TENGO FONDO CELESTE Y AGRANDA TAMAÑO*/
+.btn-color {
+  background: pink;
+  border-color: black;
+  -webkit-box-shadow: 2px 2px grey;
+          box-shadow: 2px 2px grey;
+  color: black;
+}
+
+.btn-color:hover {
+  background: lightblue;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/*CAMBIO EL COLOR DEL BOTON DE MAS.. DEL COLLAPSE*/
+.mainQuienSoy.contenedor.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: 'Poiret One', cursive;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 576px) {
+  .mainQuienSoy__fotoMari img {
+    /*ESTILO LA FOTO DE ACUERDO A RESOLUCION*/
+    width: 120px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mainQuienSoy__fotoMari img {
+    width: 180px;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+}
+
+.mainQuienSoy__contenedor__detalle {
+  /*ESTILO LA LETRA DEL CONTENEDOR*/
+  font-family: helvetica, arial, sans-serif;
+  color: white;
+  font-size: 12px;
+  text-shadow: 1px 1px black;
+  text-align: justify;
+  padding: 5px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainQuienSoy__contenedor__detalle {
+    font-size: 14px;
+    letter-spacing: 1px;
+    /* ACA REPITO ESPACIO ENTRE LETRAS, PARRAGOS Y PALABRAS*/
+    word-spacing: 1px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainQuienSoy__contenedor__detalle {
+    font-size: 16px;
+  }
+}
+
+.mainQuienSoy__contenedor__detalle img {
+  /*ESTILO LA IMAGEN DENTRO*/
+  border: 1px solid black;
+  -webkit-box-shadow: 2px 2px white;
+          box-shadow: 2px 2px white;
+  width: 80px;
+  height: auto;
+  background-color: white;
+  opacity: 60%;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainQuienSoy__contenedor__detalle img {
+    justify-items: center;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainQuienSoy__contenedor__detalle img {
+    width: 140px;
+  }
+}
+
+.mainQuienSoy__contenedor__detalle a {
+  /*ROMPRO LA ESTRUCTURA DE LA IMAGEN DEL LOGO PARA CENTRARLA*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainQuienSoy__contenedor__detalle iframe {
+  /*ESTILO EL VIDEO*/
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.articleQuienSoy h3 {
+  /*ESTILO EL DETALLE DEL ARTICULO QUIEN SOY*/
+  font: oblique;
+  color: #32a0dc;
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 1px 1px white;
+  margin: 10px 0px 10px 0px;
+  border-top: 1px solid white;
+  text-align: center;
+}
+
+@media screen and (min-width: 577px) {
+  .articleQuienSoy h3 {
+    font-size: 24px;
+    text-shadow: 1px 1px black;
+    margin-left: 10px 0px 10px 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articleQuienSoy h3 {
+    font-size: 32px;
+    text-shadow: 1px 1px black;
+    margin-left: 10px 0px 10px 10px;
+  }
+}
+
+.articleQuienSoy__pasteleros {
+  /*ESTILO LAS FOTOS D LOS PASTELEROS Y LE DOY ANIMACION, EN TODOS HAGO LO MISMO*/
+}
+
+.articleQuienSoy__pasteleros__pedroLambertini {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articleQuienSoy__pasteleros__pedroLambertini img {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.articleQuienSoy__pasteleros__pedroLambertini img:hover {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.articleQuienSoy__pasteleros__osvaldoGross {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articleQuienSoy__pasteleros__osvaldoGross img {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.articleQuienSoy__pasteleros__osvaldoGross img:hover {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.articleQuienSoy__pasteleros__annaOlson {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articleQuienSoy__pasteleros__annaOlson img {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.articleQuienSoy__pasteleros__annaOlson img:hover {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.articleQuienSoy__pasteleros__damianBetular {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articleQuienSoy__pasteleros__damianBetular img {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.articleQuienSoy__pasteleros__damianBetular img:hover {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@media screen and (min-width: 577px) {
+  .articleQuienSoy__pasteleros {
+    /*CAMBIO TAMAÑOS DE FOTOS DE ACUERDO A RESOLUCION*/
+  }
+  .articleQuienSoy__pasteleros__pedroLambertini img {
+    height: 180px;
+    width: 150px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__osvaldoGross img {
+    height: 180px;
+    width: 150px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__annaOlson img {
+    height: 180px;
+    width: 150px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__damianBetular img {
+    height: 180px;
+    width: 150px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articleQuienSoy__pasteleros__pedroLambertini img {
+    height: 280px;
+    width: 200px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__osvaldoGross img {
+    height: 280px;
+    width: 200px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__annaOlson img {
+    height: 280px;
+    width: 200px;
+    margin: auto;
+  }
+  .articleQuienSoy__pasteleros__damianBetular img {
+    height: 280px;
+    width: 200px;
+    margin: auto;
+  }
+}
+
+#salado {
+  background-image: url(../Multimedia/IMG/FondoPan2.jpg);
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainSalado__carrusel {
+  /*CUANDO LA PATNALLA ES CHICA, HAGO UN CARRUSEL DE LAS FOTOS HORIZONTALES*/
+}
+
+@media screen and (max-width: 576px) {
+  .mainSalado__carrusel {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel {
+    display: none;
+    /*CUANDO LA PANTALLA ES MEDIANA, NO LO MUESTRO*/
+  }
+}
+
+.mainSalado__carrusel__horizontal {
+  width: 320px;
+  /*ESTILO EL ESPACIO DE LAS FOTOS HORIZONTALES*/
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel__horizontal {
+    width: 500px;
+  }
+}
+
+.mainSalado__carrusel__horizontal img {
+  /*ESTILO LAS FOTOS HORIZONTALES*/
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel__horizontal img {
+    width: 480px;
+    height: 380px;
+  }
+}
+
+.mainSalado__carrusel__horizontal h5 {
+  /*ESTILO LOS TITULOS Y USO OPERACIONES PARA AUMENTAR EL TAMAÑO DE LAS LETRAS*/
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel__horizontal h5 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__carrusel__horizontal h5 {
+    font-size: 48px;
+  }
+}
+
+.mainSalado__carrusel__vertical {
+  /*IDEM CON LAS FOTOS VERTICALES*/
+  width: 320px;
+}
+
+.mainSalado__carrusel__vertical img {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel__vertical img {
+    width: 480px;
+    height: 580px;
+  }
+}
+
+.mainSalado__carrusel__vertical h5 {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__carrusel__vertical h5 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__carrusel__vertical h5 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mainSalado__tarjetas {
+    /*CUANDO LA PANTALLA ES CHICA, NO MUESTRO TARJETAS*/
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__tarjetas {
+    /*CUANDO ES PANTALLA MEDIANA, MUESTRO LAS TARJETAS*/
+    display: block;
+  }
+}
+
+.mainSalado__tarjetas__horizontales img {
+  /*IDEM ESTILADO DE FOTOS Y CONTENEDOR CON FOTOS VERTICALES*/
+  border: 1px solid black;
+  width: 170px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__tarjetas__horizontales img {
+    width: 230px;
+    height: 170px;
+  }
+}
+
+.mainSalado__tarjetas__horizontales img:hover {
+  /*HAGO UNA ANIMACION CUANDO PASO POR LAS IMAGENES*/
+  -webkit-animation: tada;
+          animation: tada;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.mainSalado__tarjetas__horizontales p {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__tarjetas__horizontales p {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__tarjetas__horizontales p {
+    font-size: 38px;
+  }
+}
+
+.mainSalado__tarjetas__horizontales p:hover {
+  /*CAMBIO DE ESCALA EL TEXTO DE LAS CARDS CUANDO PASO EL MOUSE*/
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.mainSalado__tarjetas__verticales img {
+  /*IDEM FOTOS VERTICALES*/
+  border: 1px solid black;
+  width: 348px;
+  height: 448px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__tarjetas__verticales img {
+    width: 480px;
+    height: 580px;
+  }
+}
+
+.mainSalado__tarjetas__verticales img:hover {
+  -webkit-animation: shakeX;
+          animation: shakeX;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.mainSalado__tarjetas__verticales p {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainSalado__tarjetas__verticales p {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSalado__tarjetas__verticales p {
+    font-size: 38px;
+  }
+}
+
+.mainSalado__tarjetas__verticales p:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#dulce {
+  background-image: url(../Multimedia/IMG/FondoDulce6.jpg);
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*EN DULCE HAGO LO MISMO QUE EN SALADO, PERO, AQUI TODAS LAS IMAGENES SON HORIZONTLES*/
+@media screen and (max-width: 576px) {
+  .mainDulce__carrusel {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel {
+    display: none;
+  }
+}
+
+.mainDulce__carrusel__superior {
+  width: 320px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__superior {
+    width: 500px;
+  }
+}
+
+.mainDulce__carrusel__superior img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__superior img {
+    width: 480px;
+    height: 380px;
+  }
+}
+
+.mainDulce__carrusel__superior h5 {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__superior h5 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainDulce__carrusel__superior h5 {
+    font-size: 48px;
+  }
+}
+
+.mainDulce__carrusel__inferior {
+  width: 320px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__inferior {
+    width: 500px;
+  }
+}
+
+.mainDulce__carrusel__inferior img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__inferior img {
+    width: 480px;
+    height: 380px;
+  }
+}
+
+.mainDulce__carrusel__inferior h5 {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__carrusel__inferior h5 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainDulce__carrusel__inferior h5 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mainDulce__tarjetas {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__tarjetas {
+    display: block;
+  }
+}
+
+.mainDulce__tarjetas img {
+  border: 1px solid black;
+  width: 170px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainDulce__tarjetas img {
+    width: 230px;
+    height: 170px;
+  }
+}
+
+.mainDulce__tarjetas img:hover {
+  -webkit-animation: tada;
+          animation: tada;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.mainDulce__tarjetas p {
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  text-transform: capitalize;
+  /*TRANSFORMO EL TEXTO*/
+  color: #038eb8;
+  text-shadow: 1px 1px white;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainDulce__tarjetas p {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainDulce__tarjetas p {
+    font-size: 38px;
+  }
+}
+
+.mainDulce__tarjetas p:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+/* PAGINA CONTACTO */
+#contacto {
+  background-image: url(../Multimedia/IMG/Contactenos1.jpg);
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* TITULO QUE SE LEE EN LA PAGINA CONTACTO */
+.mainContacto h3 {
+  /*Cambio téxto y tamño a los titulos h3*/
+  font-family: 'Italianno', cursive;
+  color: lightgreen;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  margin-top: 0;
+  font-size: 23px;
+  background: #2b2828;
+  opacity: 90%;
+}
+
+@media screen and (min-width: 577px) {
+  .mainContacto h3 {
+    font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainContacto h3 {
+    text-shadow: 1px 1px black;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 72px;
+  }
+}
+
+.mainContacto__contenedor__detalle {
+  /*ESTILO LOS CONTENEDORES, EL TEXTO Y LAS LISTAS*/
+  background-color: black;
+  opacity: 90%;
+}
+
+.mainContacto__contenedor__detalle p {
+  font-family: helvetica, arial, sans-serif;
+  color: white;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 577px) {
+  .mainContacto__contenedor__detalle p {
+    font-size: 14px;
+  }
+}
+
+.mainContacto__contenedor__detalle ul li {
+  list-style: url(../Multimedia/IMG/comprobar.png);
+  /*CAMBIO LA VIÑETA*/
+  list-style-position: inside;
+  /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainContacto__contenedor__detalle ul li {
+    font-size: 14px;
+  }
+}
+
+.mainContacto__contenedor__ejemplo {
+  font-style: italic;
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainContacto__contenedor__ejemplo {
+    font-size: 14x;
+  }
+}
+
+.mainContacto__contenedor__ejemplo ul li {
+  list-style: circle;
+  /*CAMBIO LA VIÑETA*/
+  list-style-position: inside;
+  /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (min-width: 577px) {
+  .mainContacto__contenedor__ejemplo ul li {
+    font-size: 14px;
+  }
+}
+
+.mainContacto__contenedor__formulario {
+  background-color: black;
+  /*CAMBIO DE COLOR EL BACKGROUND*/
+  opacity: 90%;
+}
+
+.mainContacto__contenedor__formulario__seleccionUsuario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*ROMPO LA ESTRUCTURA PARA ACOMODAR LOS COMPONENTES*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .mainContacto__contenedor__formulario__seleccionUsuario {
+    padding: 0px 0px 10px 50px;
+  }
+}
+
+.mainContacto__contenedor__formulario__seleccionUsuario__comentario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */

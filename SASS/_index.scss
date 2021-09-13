@@ -1,0 +1,170 @@
+#index{
+    background-image: url(../Multimedia/IMG/FondoDulce1.jpg); 
+    @include fondoPantalla; /*hago un mixin del fodo de pantalla. Esto se repite en todos*/
+}
+
+/*Aca busco estilar el header que es comun a todos*/
+.header{
+    &__menu{
+        &__adelaidaLogo{
+            width: 150px;
+            border: 1px solid black;
+        }
+        &__menuAlineado{
+            & ul{
+                align-items: flex-end;
+            }
+            & li{
+                font-family: $fuente;
+                font-size: 15px;
+            }
+        }
+        &__alineado{
+            & ul li a:hover{    /*efecto de pasar el mouse por el menu*/
+                animation: heartBeat;
+                animation-duration: 2s;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+.main{
+    &__tituloAdelaida{
+        font-family: $fuenteEstilada;
+        color: #38b4a8;
+        background-color: white;
+        opacity: 90%;
+        font-weight: bolder;
+        & p{
+            margin-bottom: 5px;
+            @media screen and (max-width: $pantallaChica){  /*considero para cada resolucion*/
+                text-shadow: 1px 1px black;
+                text-align: center;
+                font-size: 18px;
+            }
+            @media screen and (min-width: $pantallaMediana){
+                text-shadow: 2px 1px black;
+                padding-left: 10px;
+                font-size: 46px;
+            }
+            @media screen and (min-width: $pantallaGrande){
+                text-shadow: 2px 2px black;
+                padding-left: 20px;
+                font-size: 68px;
+            }
+        }
+    }
+    &__columnas{
+        @media screen and (max-width: $pantallaChica){ /*Cuando es pantalla chica, no se muestra las columnas*/
+            display: none;
+        }
+        @media screen and (min-width: $pantallaMediana){ /*Cuando es pantalla mediana, se muestran las columnas*/
+            display: block;
+
+            &__tarjeta{ 
+                & img{
+                    border-radius: 5px;
+                    border: 2px solid white;
+                    height: 207px;
+                    width: auto;
+                }    
+                & p{
+                    font-weight: bolder;
+                    color: white;
+                    font-size: $FontSize + 4px;
+                    text-shadow: 2px 1px black;
+                }
+            }
+        }   
+    }
+    &__carrusel{
+        @media screen and (max-width: $pantallaChica){  /*Cuando la pantalla es chica, se muestran en carrusel*/
+            display:block;
+            &__contenido{
+                & img{
+                    width: 300px;
+                    height: 190px;
+                    margin: auto;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                }
+                & h5, p{
+                    font-weight: bolder;
+                    color: white;
+                    text-shadow: 2px 1px black;
+                    }
+            &__tarjeta img{
+                height: auto;
+                border-radius: 5px;;
+                border: 1px solid white;
+            }
+            }
+        }
+        @media screen and (min-width: $pantallaMediana){ /*Cuando la pantalla es mediana, se apaga el carrusel*/
+            display: none;
+        }
+    }
+}
+
+.presentacion{  /*Estilo la presentacion dependiendo la resolucion*/
+    &__titulo{
+        & h3{
+            font-family: $fuenteEstilada;
+            color: #b3c11b;
+            text-shadow: 1px 2px black; 
+            margin-left: 5px;
+            font-size: 30px;
+            @media screen and (min-width: $pantallaMediana){
+                margin-left: 10px;
+                font-size: 42px; 
+            }
+            @media screen and (min-width: $pantallaGrande){
+                font-size: 62px;
+            }  
+        }
+    }
+    &__texto{ /*Estilo el detalle dependiendo la resolucion*/
+        height: auto;
+        letter-spacing: 1px;   
+        background-color: white;
+        opacity: 60%;
+        & p{
+            font-family: helvetica, Arial, sans-serif;
+            color: black;
+            text-shadow: 1px 2px yellow;
+            padding:5px;
+            font-size:$FontSize;
+            text-align: justify;
+            @media screen and (min-width: $pantallaMediana) {
+                font-size:$FontSize + 2px;    
+            }
+            @media screen and (min-width: $pantallaGrande) {
+                font-size: $FontSize + 4px;
+            }
+        }
+    }
+}
+
+.bootFooter{    /*estilo el footer*/
+    height:9vh;
+    & a{
+        color: white; /*La letra del boron en texto blanco*/
+        font-size: 20px;
+        margin: 5px 2px 5px 2px;
+    }
+}
+
+/*Hago un heach para que los iconos tengan color blanco, ver VARS*/
+@each $red, $color in $redes{
+    .main__bootFooter__redes--#{$red}{
+        color: $color;
+    }
+}
+
+/* REALIZO UN MAPA PARA HACER UN EACH PARA ASIGNAR HOVER A LOS COLORES DE LOS ICONOS DE LAS REDES SOCIALES, ver VARS*/
+@each $red, $color in $redesHover{
+    .main__bootFooter__redes--#{$red}:hover{
+        color: $color;
+    }
+}

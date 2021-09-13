@@ -1,0 +1,94 @@
+/* PAGINA CONTACTO */
+#contacto{
+    background-image: url(../Multimedia/IMG/Contactenos1.jpg);
+    @include fondoPantalla;
+}
+
+
+/* TITULO QUE SE LEE EN LA PAGINA CONTACTO */
+.mainContacto{
+    & h3{ /*Cambio téxto y tamño a los titulos h3*/
+        font-family: 'Italianno', cursive;
+        color: lightgreen;
+        text-shadow: 1px 1px black;
+        text-align: center;
+        margin-top:0;
+        font-size: 23px;
+        background: rgb(43, 40, 40);
+        opacity: 90%;
+        @media screen and (min-width: $pantallaMediana){
+            font-size: 52px;    
+        }
+        @media screen and (min-width: $pantallaGrande){
+            text-shadow: 1px 1px black;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 72px;
+        }
+    }
+    &__contenedor{
+        &__detalle{ /*ESTILO LOS CONTENEDORES, EL TEXTO Y LAS LISTAS*/
+            background-color: black;
+            opacity: 90%;
+            & p{
+                font-family: helvetica, arial, sans-serif;
+                color: white;
+                font-size: $FontSize;
+                padding-left: 10px;
+                padding-top: 10px;
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize + 2px;
+                }
+            }
+            & ul li{
+                list-style: url(../Multimedia/IMG/comprobar.png); /*CAMBIO LA VIÑETA*/
+                list-style-position: inside;    /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+                align-items: center;
+                font-family: $fuente;
+                font-size: $FontSize;
+                color:white;
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize + 2px;
+                }
+            }
+        }
+        &__ejemplo{
+            font-style: italic; 
+            font-size: $FontSize;
+            color:white;
+            @media screen and(min-width: $pantallaMediana) {
+                font-size: 14x;
+            }
+            & ul li{
+                list-style: circle; /*CAMBIO LA VIÑETA*/
+                list-style-position: inside;    /*MOFIFICO LA POSICION DE LAS VIÑETAS*/
+                align-items: center;
+                font-family: helvetica, arial, sans-serif;
+                font-size: $FontSize;
+                color:white;
+                @media screen and(min-width: $pantallaMediana) {
+                    font-size: $FontSize + 2px;
+                }
+            }
+        }
+        &__formulario{
+            background-color: black; /*CAMBIO DE COLOR EL BACKGROUND*/
+            opacity: 90%;
+            &__seleccionUsuario{
+                display: flex;  /*ROMPO LA ESTRUCTURA PARA ACOMODAR LOS COMPONENTES*/
+                flex-direction: column;
+                justify-content: center;
+                color:white;
+                @media screen and(max-width: $pantallaChica) {
+                    padding:0px 0px 10px 50px;
+                }
+                &__comentario{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

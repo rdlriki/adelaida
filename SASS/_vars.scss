@@ -1,0 +1,50 @@
+$fuente: helvetica, arial, sans-serif;
+$fuenteEstilada: 'Italianno', cursive;
+$pantallaChica: 576px;
+$pantallaMediana: 577px;
+$pantallaGrande: 1024px;
+$FontSize: 12px;
+$FontItalianno: 22px;
+
+@mixin fondoPantalla{
+    min-height: 480px;
+    background-size:cover;  // COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER
+    background-position: center;    //CENTRADA
+    background-repeat: no-repeat;   //SIN REPETIR
+}
+
+@mixin textoDulceSalado{
+    text-align: center;
+    font-family: $fuenteEstilada;
+    font-weight: bold;
+    text-transform: capitalize; /*TRANSFORMO EL TEXTO*/
+    color: #038eb8;
+    text-shadow: 1px 1px white;
+    font-size: $FontItalianno ;
+}
+
+@mixin imgCarrusel{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+@mixin imgHorizontales{
+    border: 1px solid black;
+    width: 170px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+$redes:(
+    fb: white,
+    yt: white,
+    ig: white,
+);
+
+$redesHover:(
+    fb: blue,
+    yt: red,
+    ig: orange,
+);

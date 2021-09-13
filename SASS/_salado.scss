@@ -1,0 +1,125 @@
+#salado{
+    background-image: url(../Multimedia/IMG/FondoPan2.jpg);
+    @include fondoPantalla;
+}
+
+.mainSalado{
+    &__carrusel{ /*CUANDO LA PATNALLA ES CHICA, HAGO UN CARRUSEL DE LAS FOTOS HORIZONTALES*/
+        @media screen and (max-width: $pantallaChica){
+            display: block;
+        }
+        @media screen and (min-width: $pantallaMediana){
+            display: none;  /*CUANDO LA PANTALLA ES MEDIANA, NO LO MUESTRO*/
+        }
+        &__horizontal{
+            width: 320px;   /*ESTILO EL ESPACIO DE LAS FOTOS HORIZONTALES*/
+            @media screen and (min-width: $pantallaMediana){
+                width: 500px;
+            }
+            & img { /*ESTILO LAS FOTOS HORIZONTALES*/
+                @include imgCarrusel;
+
+                @media screen and (min-width: $pantallaMediana){
+                    width: 480px;
+                    height: 380px
+                }  
+            }
+
+            & h5{   /*ESTILO LOS TITULOS Y USO OPERACIONES PARA AUMENTAR EL TAMAÑO DE LAS LETRAS*/
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 10px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: $FontItalianno + 26px;
+                }  
+            }
+        }
+        &__vertical{    /*IDEM CON LAS FOTOS VERTICALES*/
+            width: 320px;
+
+            & img {
+                width: 300px;
+                height: 400px;
+                border-radius: 10px;
+                border: 2px solid white;
+
+                @media screen and (min-width: $pantallaMediana){
+                    width: 480px;
+                    height: 580px;
+                }
+            }
+            & h5{
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 6px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: 38px;
+                }  
+            }
+        }
+    }
+
+    &__tarjetas{
+        @media screen and (max-width: $pantallaChica){ /*CUANDO LA PANTALLA ES CHICA, NO MUESTRO TARJETAS*/
+            display: none;
+        }
+        @media screen and (min-width: $pantallaMediana){ /*CUANDO ES PANTALLA MEDIANA, MUESTRO LAS TARJETAS*/
+            display: block;
+        }
+        &__horizontales{
+            & img{  /*IDEM ESTILADO DE FOTOS Y CONTENEDOR CON FOTOS VERTICALES*/
+                @include imgHorizontales;
+                @media screen and (min-width: $pantallaGrande){
+                    width: 230px;
+                    height: 170px;
+                }
+            }
+            & img:hover{  /*HAGO UNA ANIMACION CUANDO PASO POR LAS IMAGENES*/
+                animation: tada;
+                animation-duration: 1s;
+            }
+            & p{
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 6px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: 38px;
+                }  
+            }
+            & p:hover{  /*CAMBIO DE ESCALA EL TEXTO DE LAS CARDS CUANDO PASO EL MOUSE*/
+                transform:scale(1.5);
+            }
+        }
+        &__verticales{
+            & img{ /*IDEM FOTOS VERTICALES*/
+                border: 1px solid black;
+                width: 348px;
+                height: 448px;
+                border-radius: 10px;
+                @media screen and (min-width: $pantallaGrande){
+                    width: 480px;
+                    height: 580px;
+                }
+            }
+            & img:hover{
+                animation: shakeX;
+                animation-duration: 1s;
+            }
+            & p{
+                @include textoDulceSalado;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: $FontItalianno + 6px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: 38px;
+                }  
+            }
+            & p:hover{
+                transform:scale(1.5);
+            }
+        }
+    }
+}
