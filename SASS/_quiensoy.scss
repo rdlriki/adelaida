@@ -124,8 +124,8 @@
             & img{
                 border: 1px solid black;
                 border-radius: 15px;
-                width: 50px;
-                height: auto;
+                width: 170px;
+                height: 200px;
             }
             & img:hover{
                 animation: pulse;
@@ -137,18 +137,22 @@
             & img{
                 border: 1px solid black;
                 border-radius: 10px;
+                width: 170px;
+                height: 200px;
             }
             & img:hover{
                 animation: pulse;
                 animation-duration: 2s;
             }
         }
-        
+
         &__annaOlson{
             justify-content: space-between;
             & img{
-            border: 1px solid black;
-            border-radius: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 170px;
+                height: 200px;
             }
             & img:hover{
                 animation: pulse;
@@ -160,6 +164,8 @@
             & img{
                 border: 1px solid black;
                 border-radius: 10px;
+                width: 170px;
+                height: 200px;
             }
             & img:hover{
                 animation: pulse;

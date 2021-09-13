@@ -46,16 +46,16 @@
   margin-bottom: 5px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .main__tituloAdelaida p {
     /*considero para cada resolucion*/
     text-shadow: 1px 1px black;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .main__tituloAdelaida p {
     text-shadow: 2px 1px black;
     padding-left: 10px;
@@ -71,14 +71,14 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .main__columnas {
     /*Cuando es pantalla chica, no se muestra las columnas*/
     display: none;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .main__columnas {
     /*Cuando es pantalla mediana, se muestran las columnas*/
     display: block;
@@ -97,7 +97,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .main__carrusel {
     /*Cuando la pantalla es chica, se muestran en carrusel*/
     display: block;
@@ -121,13 +121,16 @@
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .main__carrusel {
     /*Cuando la pantalla es mediana, se apaga el carrusel*/
     display: none;
   }
 }
 
+.presentacion {
+  /*Estilo la presentacion dependiendo la resolucion*/
+}
 
 .presentacion__titulo h3 {
   font-family: "Italianno", cursive;
@@ -137,7 +140,7 @@
   font-size: 30px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .presentacion__titulo h3 {
     margin-left: 10px;
     font-size: 42px;
@@ -167,7 +170,7 @@
   text-align: justify;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .presentacion__texto p {
     font-size: 14px;
   }
@@ -252,7 +255,7 @@
   font-size: 2em;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainQuienSoy__fotoMari img {
     /*ESTILO LA FOTO DE ACUERDO A RESOLUCION*/
     width: 120px;
@@ -262,7 +265,7 @@
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainQuienSoy__fotoMari img {
     width: 180px;
     border: 2px solid white;
@@ -280,7 +283,7 @@
   padding: 5px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainQuienSoy__contenedor__detalle {
     font-size: 14px;
     letter-spacing: 1px;
@@ -307,7 +310,7 @@
   border-radius: 2px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainQuienSoy__contenedor__detalle img {
     justify-items: center;
     width: 100px;
@@ -352,7 +355,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .articleQuienSoy h3 {
     font-size: 24px;
     text-shadow: 1px 1px black;
@@ -368,6 +371,9 @@
   }
 }
 
+.articleQuienSoy__pasteleros {
+  /*ESTILO LAS FOTOS D LOS PASTELEROS Y LE DOY ANIMACION, EN TODOS HAGO LO MISMO*/
+}
 
 .articleQuienSoy__pasteleros__pedroLambertini {
   -webkit-box-pack: justify;
@@ -377,7 +383,9 @@
 
 .articleQuienSoy__pasteleros__pedroLambertini img {
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
+  width: 170px;
+  height: 200px;
 }
 
 .articleQuienSoy__pasteleros__pedroLambertini img:hover {
@@ -396,6 +404,8 @@
 .articleQuienSoy__pasteleros__osvaldoGross img {
   border: 1px solid black;
   border-radius: 10px;
+  width: 170px;
+  height: 200px;
 }
 
 .articleQuienSoy__pasteleros__osvaldoGross img:hover {
@@ -414,6 +424,8 @@
 .articleQuienSoy__pasteleros__annaOlson img {
   border: 1px solid black;
   border-radius: 10px;
+  width: 170px;
+  height: 200px;
 }
 
 .articleQuienSoy__pasteleros__annaOlson img:hover {
@@ -432,6 +444,8 @@
 .articleQuienSoy__pasteleros__damianBetular img {
   border: 1px solid black;
   border-radius: 10px;
+  width: 170px;
+  height: 200px;
 }
 
 .articleQuienSoy__pasteleros__damianBetular img:hover {
@@ -441,7 +455,10 @@
           animation-duration: 2s;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
+  .articleQuienSoy__pasteleros {
+    /*CAMBIO TAMAÑOS DE FOTOS DE ACUERDO A RESOLUCION*/
+  }
   .articleQuienSoy__pasteleros__pedroLambertini img {
     height: 180px;
     width: 150px;
@@ -495,14 +512,17 @@
   background-repeat: no-repeat;
 }
 
+.mainSalado__carrusel {
+  /*CUANDO LA PATNALLA ES CHICA, HAGO UN CARRUSEL DE LAS FOTOS HORIZONTALES*/
+}
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainSalado__carrusel {
     display: block;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel {
     display: none;
     /*CUANDO LA PANTALLA ES MEDIANA, NO LO MUESTRO*/
@@ -514,7 +534,7 @@
   /*ESTILO EL ESPACIO DE LAS FOTOS HORIZONTALES*/
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel__horizontal {
     width: 500px;
   }
@@ -528,7 +548,7 @@
   border: 2px solid white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel__horizontal img {
     width: 480px;
     height: 380px;
@@ -547,7 +567,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel__horizontal h5 {
     font-size: 32px;
   }
@@ -571,7 +591,7 @@
   border: 2px solid white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel__vertical img {
     width: 480px;
     height: 580px;
@@ -589,7 +609,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__carrusel__vertical h5 {
     font-size: 28px;
   }
@@ -601,14 +621,14 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainSalado__tarjetas {
     /*CUANDO LA PANTALLA ES CHICA, NO MUESTRO TARJETAS*/
     display: none;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__tarjetas {
     /*CUANDO ES PANTALLA MEDIANA, MUESTRO LAS TARJETAS*/
     display: block;
@@ -649,7 +669,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__tarjetas__horizontales p {
     font-size: 28px;
   }
@@ -700,7 +720,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainSalado__tarjetas__verticales p {
     font-size: 28px;
   }
@@ -726,13 +746,13 @@
 }
 
 /*EN DULCE HAGO LO MISMO QUE EN SALADO, PERO, AQUI TODAS LAS IMAGENES SON HORIZONTLES*/
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainDulce__carrusel {
     display: block;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel {
     display: none;
   }
@@ -742,7 +762,7 @@
   width: 320px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__superior {
     width: 500px;
   }
@@ -755,7 +775,7 @@
   border: 2px solid white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__superior img {
     width: 480px;
     height: 380px;
@@ -773,7 +793,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__superior h5 {
     font-size: 32px;
   }
@@ -789,7 +809,7 @@
   width: 320px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__inferior {
     width: 500px;
   }
@@ -802,7 +822,7 @@
   border: 2px solid white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__inferior img {
     width: 480px;
     height: 380px;
@@ -820,7 +840,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__carrusel__inferior h5 {
     font-size: 32px;
   }
@@ -832,13 +852,13 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainDulce__tarjetas {
     display: none;
   }
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__tarjetas {
     display: block;
   }
@@ -876,7 +896,7 @@
   font-size: 22px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainDulce__tarjetas p {
     font-size: 28px;
   }
@@ -915,7 +935,7 @@
   opacity: 90%;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainContacto h3 {
     font-size: 52px;
   }
@@ -944,7 +964,7 @@
   padding-top: 10px;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainContacto__contenedor__detalle p {
     font-size: 14px;
   }
@@ -963,7 +983,7 @@
   color: white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainContacto__contenedor__detalle ul li {
     font-size: 14px;
   }
@@ -975,7 +995,7 @@
   color: white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainContacto__contenedor__ejemplo {
     font-size: 14x;
   }
@@ -994,7 +1014,7 @@
   color: white;
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 768px) {
   .mainContacto__contenedor__ejemplo ul li {
     font-size: 14px;
   }
@@ -1004,6 +1024,30 @@
   background-color: black;
   /*CAMBIO DE COLOR EL BACKGROUND*/
   opacity: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .mainContacto__contenedor__formulario label {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainContacto__contenedor__formulario label {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainContacto__contenedor__formulario input {
+    font-size: 14x;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainContacto__contenedor__formulario input {
+    font-size: 14px;
+  }
 }
 
 .mainContacto__contenedor__formulario__seleccionUsuario {
@@ -1021,7 +1065,7 @@
   color: white;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .mainContacto__contenedor__formulario__seleccionUsuario {
     padding: 0px 0px 10px 50px;
   }
