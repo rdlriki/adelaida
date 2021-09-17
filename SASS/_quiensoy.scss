@@ -17,10 +17,28 @@
     }
 }
 
+@mixin btn-txt($TipoFuente) {
+    text-decoration:none;
+    padding:5px;
+    border-radius:3px;
+    font-family: $TipoFuente;
+    font-size:0.8rem;
+    @media screen and (min-width: $pantallaMediana) { /*ESTILO LA FOTO DE ACUERDO A RESOLUCION*/
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: $pantallaGrande) {
+        font-size: 1.5rem;
+    }
+}
+
 .btn-color {
     @include button-bg(pink);
     color:black;
- }
+}
+
+.btn-texto{
+    @include btn-txt('Poiret One,cursive');
+} 
 
 /*CAMBIO EL COLOR DEL BOTON DE MAS.. DEL COLLAPSE*/
 .mainQuienSoy.contenedor.btn {
@@ -49,6 +67,19 @@
         }
     }
     &__contenedor{
+        & p{
+            font-family: $fuente;
+            color: black;
+            font-weight: bold;
+            background: rgb(240, 238, 238);
+            font-size: $FontSize;
+            @media screen and (min-width: $pantallaMediana) {
+                font-size: $FontSize + 10px;
+            } 
+            @media screen and (min-width: $pantallaGrande) {
+                font-size: $FontSize + 14px;
+            } 
+        }
         &__detalle{ /*ESTILO LA LETRA DEL CONTENEDOR*/
             font-family: $fuente;
             color:white;
@@ -113,110 +144,115 @@
         }
         @media screen and (min-width: $pantallaGrande) {
             font-size: 32px;
-            text-shadow: 1px 1px black; 
+            text-shadow: 1px 2px white; 
             margin-left: 10px 0px 10px 10px;
         }
     }
-    
-    &__pasteleros{  /*ESTILO LAS FOTOS D LOS PASTELEROS Y LE DOY ANIMACION, EN TODOS HAGO LO MISMO*/
-        &__pedroLambertini{ 
-            justify-content: space-between;
-            & img{
-                border: 1px solid black;
-                border-radius: 15px;
-                width: 170px;
-                height: 200px;
-            }
-            & img:hover{
-                animation: pulse;
-                animation-duration: 2s;
-            }
-        }
-        &__osvaldoGross{
-            justify-content: space-between;
-            & img{
-                border: 1px solid black;
-                border-radius: 10px;
-                width: 170px;
-                height: 200px;
-            }
-            & img:hover{
-                animation: pulse;
-                animation-duration: 2s;
-            }
-        }
+}   
 
-        &__annaOlson{
-            justify-content: space-between;
-            & img{
-                border: 1px solid black;
-                border-radius: 10px;
-                width: 170px;
-                height: 200px;
-            }
-            & img:hover{
-                animation: pulse;
-                animation-duration: 2s;
-            }
+.articleQuienSoy__pasteleros{  /*ESTILO LAS FOTOS D LOS PASTELEROS Y LE DOY ANIMACION, EN TODOS HAGO LO MISMO*/
+    background: white;
+    opacity: 90%;
+    &__pedroLambertini{
+        justify-content: space-between;
+        & img{
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 170px;
+            height: auto;
         }
-        &__damianBetular{
-            justify-content: space-between;
-            & img{
-                border: 1px solid black;
-                border-radius: 10px;
-                width: 170px;
-                height: 200px;
-            }
-            & img:hover{
-                animation: pulse;
-                animation-duration: 2s;
-            }
+        & img:hover{
+            animation: pulse;
+            animation-duration: 2s;
         }
+    }
+    &__osvaldoGross{
+        justify-content: space-between;
+        & img{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: auto;
+        }
+        & img:hover{
+            animation: pulse;
+            animation-duration: 2s;
+        }
+    }
+    &__annaOlson{
+        justify-content: space-between;
+        & img{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: auto;
+        }
+        & img:hover{
+            animation: pulse;
+            animation-duration: 2s;
+        }
+    }
+    &__damianBetular{
+        justify-content: space-between;
+        & img{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: auto;
+        }
+        & img:hover{
+            animation: pulse;
+            animation-duration: 2s;
+        }
+    }
 
-        @media screen and (min-width: $pantallaMediana){ /*CAMBIO TAMAÑOS DE FOTOS DE ACUERDO A RESOLUCION*/
-            &__pedroLambertini img{
-                height: 180px;
-                width: 150px;
-                margin: auto;
-            }
-            &__osvaldoGross img{
-                height: 180px;
-                width: 150px;
-                margin: auto;
-            }
-            &__annaOlson img{
-                height: 180px;
-                width: 150px;
-                margin: auto;
-            }
-            &__damianBetular img{
-                height: 180px;
-                width: 150px;
-                margin: auto;
-            }
+    @media screen and (min-width: $pantallaMediana){ /*CAMBIO TAMAÑOS DE FOTOS DE ACUERDO A RESOLUCION*/
+        background: white;
+        opacity: 90%;
+        &__pedroLambertini img{
+            height: 180px;
+            width: 150px;
+            margin: auto;
         }
+        &__osvaldoGross img{
+            height: 180px;
+            width: 150px;
+            margin: auto;
+        }
+        &__annaOlson img{
+            height: 180px;
+            width: 150px;
+            margin: auto;
+        }
+        &__damianBetular img{
+            height: 180px;
+            width: 150px;
+            margin: auto;
+        }
+    }
 
-        @media screen and (min-width: $pantallaGrande){
-            &__pedroLambertini img{
-                height: 280px;
-                width: 200px;
-                margin: auto;
-            }
-            &__osvaldoGross img{
-                height: 280px;
-                width: 200px;
-                margin: auto;
-            }
-            &__annaOlson img{
-                height: 280px;
-                width: 200px;
-                margin: auto;
-            }
-            &__damianBetular img{
-                height: 280px;
-                width: 200px;
-                margin: auto;
-            }
+    @media screen and (min-width: $pantallaGrande){
+        background: white;
+        opacity: 90%;
+        &__pedroLambertini img{
+            height: 280px;
+            width: 200px;
+            margin: auto;
+        }
+        &__osvaldoGross img{
+            height: 280px;
+            width: 200px;
+            margin: auto;
+        }
+        &__annaOlson img{
+            height: 280px;
+            width: 200px;
+            margin: auto;
+        }
+        &__damianBetular img{
+            height: 280px;
+            width: 200px;
+            margin: auto;
         }
     }
 }

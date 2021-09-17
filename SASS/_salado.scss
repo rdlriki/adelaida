@@ -5,6 +5,7 @@
 
 .mainSalado{
     &__carrusel{ /*CUANDO LA PATNALLA ES CHICA, HAGO UN CARRUSEL DE LAS FOTOS HORIZONTALES*/
+        justify-content: center;
         @media screen and (max-width: $pantallaChica){
             display: block;
         }
