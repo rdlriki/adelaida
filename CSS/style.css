@@ -16,7 +16,7 @@
 /*Aca busco estilar el header que es comun a todos*/
 .header__menu__adelaidaLogo {
   width: 150px;
-  border: 1px solid black;
+  height: auto;
 }
 
 .header__menu__alineado ul {
