@@ -8,3 +8,6 @@
     - En "_index.scss" se agregó el cambio de color del texto del MENU de BOOSTRAP
 - 20/09/2021: esta versión contiene:
     - Cambié el logo de la página por el logo con diseño
+    - El footer de todas las paginas son iguales:
+        - Los iconos de redes sociales son BLANCOS
+        - Tienen un HOVER que al pasar el mouse, cambian de color
