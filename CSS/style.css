@@ -34,7 +34,7 @@
 }
 
 .header__menu__adelaidaLogo {
-  width: 150px;
+  width: 120px;
   height: auto;
   -webkit-animation: flipInX;
           animation: flipInX;
@@ -42,11 +42,27 @@
           animation-duration: 4s;
 }
 
-.header__menu__alineado {
-  -webkit-animation: fadeInRight;
-          animation: fadeInRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+@media screen and (min-width: 768px) {
+  .header__menu__adelaidaLogo {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__menu__adelaidaLogo {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__menu__alineado {
+    -webkit-animation: fadeInRight;
+            animation: fadeInRight;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+  }
 }
 
 .header__menu__alineado ul {
@@ -57,7 +73,19 @@
 
 .header__menu__alineado li {
   font-family: helvetica, arial, sans-serif;
-  font-size: 15px;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu__alineado li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__menu__alineado li {
+    font-size: 20px;
+  }
 }
 
 .header__menu__alineado--txtMenu {
@@ -232,7 +260,7 @@
 
 .main__bootFooter {
   /*estilo el footer*/
-  height: 12vh;
+  height: 13vh;
   background: #826D76;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,6 +297,7 @@
   color: white;
   /*La letra del boron en texto blanco*/
   font-size: 20px;
+  margin-bottom: 5px;
 }
 
 /*Hago un heach para que los iconos tengan color blanco, ver VARS*/
@@ -1079,7 +1108,7 @@
   text-shadow: 1px 1px black;
   text-align: center;
   margin-top: 0;
-  font-size: 32px;
+  font-size: 24px;
   background: #2b2828;
   opacity: 90%;
 }
@@ -1228,9 +1257,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

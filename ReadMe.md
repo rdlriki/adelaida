@@ -21,6 +21,7 @@
     - Modifiqué el footer (ya no es un boton drop)
     - Encontrarán animaciones en:
         - Menú (hover)
+        - El menú en "PANTALLA GRANDE" tiene una animación: se desplaza de derecha a izquierda
         - Footer (hover en los iconos de redes sociales)
         - Fotos de pasteleros
         - Fotos y nombres de tortas en DULCE

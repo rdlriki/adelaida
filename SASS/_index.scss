@@ -21,20 +21,36 @@
     background-color: $ColorPastel;
     &__menu{
         &__adelaidaLogo{
-            width: 150px;
+            width: 120px;
             height: auto;
+            @media screen and (min-width: $pantallaMediana){
+                width: 150px;
+                height: auto;
+            }
+            @media screen and (min-width: $pantallaGrande){
+                width: 200px;
+                height: auto;
+            }
             animation: flipInX;
             animation-duration: 4s;
         }
         &__alineado{
-            animation: fadeInRight;
-            animation-duration: 2s;
+            @media screen and (min-width: $pantallaGrande){
+                animation: fadeInRight;
+                animation-duration: 2s; 
+            }
             & ul{
                 align-items: flex-end;
             }
             & li{   
                 font-family: $fuente;
-                font-size: 15px;
+                font-size: 10px;
+                @media screen and (min-width: $pantallaMediana){
+                    font-size: 15px;
+                }
+                @media screen and (min-width: $pantallaGrande){
+                    font-size: 20px;
+                }
             }
             &--txtMenu{
                 color: blue;
@@ -172,7 +188,7 @@
 
 .main{
     &__bootFooter{    /*estilo el footer*/
-        height:12vh;
+        height:13vh;
         background: $ColorMarron;
         display: flex;
         flex-direction: column;
@@ -194,6 +210,7 @@
             & a{
                 color: white; /*La letra del boron en texto blanco*/
                 font-size: 20px;
+                margin-bottom: 5px;
             }
         }
     }
