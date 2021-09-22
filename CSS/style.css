@@ -2,6 +2,15 @@
 /* Color ROSA del Logo de Adelaida */
 /* Color MARRON del Logo de Adelaida */
 /* Color PASTEL del Logo de Adelaida */
+/* RESET DE LAS PROPIEDADES */
+/* POR SASS ESTO SE APLICA A TODAS LAS DEMAS PAGINAS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #index {
   background-image: url(../Multimedia/IMG/FondoDulce1.jpg);
   min-height: 480px;
@@ -27,6 +36,17 @@
 .header__menu__adelaidaLogo {
   width: 150px;
   height: auto;
+  -webkit-animation: flipInX;
+          animation: flipInX;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+.header__menu__alineado {
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .header__menu__alineado ul {
@@ -107,6 +127,12 @@
     border: 2px solid white;
     height: 207px;
     width: auto;
+  }
+  .main__columnas__tarjeta img:hover {
+    -webkit-animation: pulse;
+            animation: pulse;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
   .main__columnas__tarjeta p {
     font-weight: bolder;
@@ -206,8 +232,37 @@
 
 .main__bootFooter {
   /*estilo el footer*/
-  height: 9vh;
+  height: 12vh;
   background: #826D76;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__bootFooter p {
+  font-family: "Italianno", cursive;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px black;
+  color: white;
+  margin: 2px 0px 2px 0px;
+  /* padding: 5px auto 5px auto; */
+}
+
+.main__bootFooter__redes {
+  /* transform: translate3d(434px, -65px, 0px) !important;  */
+  /*YO SE QUE NO SE PUEDE USAR IMPORTANT, PERO NO ENCONTRÉ MANERA DE CORREGIR LA POSICION DEL BOTON DE BOOSTRAP*/
 }
 
 .main__bootFooter__redes a {
@@ -824,6 +879,7 @@
           transform: scale(1.5);
 }
 
+/* PAGINA DULCE */
 #dulce {
   background-image: url(../Multimedia/IMG/FondoDulce6.jpg);
   min-height: 480px;

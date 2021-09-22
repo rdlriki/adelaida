@@ -1,3 +1,11 @@
+/* RESET DE LAS PROPIEDADES */
+/* POR SASS ESTO SE APLICA A TODAS LAS DEMAS PAGINAS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #index{
     background-image: url(../Multimedia/IMG/FondoDulce1.jpg); 
     @include fondoPantalla; /*hago un mixin del fodo de pantalla. Esto se repite en todos*/
@@ -15,8 +23,12 @@
         &__adelaidaLogo{
             width: 150px;
             height: auto;
+            animation: flipInX;
+            animation-duration: 4s;
         }
         &__alineado{
+            animation: fadeInRight;
+            animation-duration: 2s;
             & ul{
                 align-items: flex-end;
             }
@@ -76,6 +88,10 @@
                     height: 207px;
                     width: auto;
                 }    
+                & img:hover{
+                    animation: pulse;
+                    animation-duration: 2s;
+                }
                 & p{
                     font-weight: bolder;
                     color: white;
@@ -156,11 +172,29 @@
 
 .main{
     &__bootFooter{    /*estilo el footer*/
-        height:9vh;
+        height:12vh;
         background: $ColorMarron;
-        &__redes a{
-            color: white; /*La letra del boron en texto blanco*/
-            font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & p{
+            font-family: $fuenteEstilada;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-shadow: 1px 1px black;
+            color: white;
+            margin: 2px 0px 2px 0px;
+            /* padding: 5px auto 5px auto; */
+        }
+        &__redes {
+            /* transform: translate3d(434px, -65px, 0px) !important;  */
+            /*YO SE QUE NO SE PUEDE USAR IMPORTANT, PERO NO ENCONTRÉ MANERA DE CORREGIR LA POSICION DEL BOTON DE BOOSTRAP*/
+            & a{
+                color: white; /*La letra del boron en texto blanco*/
+                font-size: 20px;
+            }
         }
     }
 }

@@ -17,8 +17,8 @@
     - Modifique el NAV Hamburguesa para que aparezca en tablet.
     - Unifiqué en VARS los colores para hacer la asignación mas fácil.
     - Modifique el color del CONTENEDOR DE QUIEN SOY (boton collapse que se titula "MAS...")
-    - Modifiqué el footer.
     - La viñeta modificada en CONTACTO ahora es de color acorde al logo.
+    - Modifiqué el footer (ya no es un boton drop)
     - Encontrarán animaciones en:
         - Menú (hover)
         - Footer (hover en los iconos de redes sociales)
@@ -26,6 +26,7 @@
         - Fotos y nombres de tortas en DULCE
         - Fotos y nombres de productos SALADO
             - Fotos horizontales y verticales tienen animaciones diferentes
+        - El logo tiene animación cuando se ejecuta la página
     - Detalles Boostrap:
         - En tamaño pantalla, use carrusel para mostrar fotos de salado/dulce/index (apagando columnas)
         - En tamaño mediano/grande, apago Carrusel y ubico las fotos en columnas de acuerdo al tamaño de pantalla.
