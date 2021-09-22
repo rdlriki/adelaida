@@ -73,7 +73,7 @@
 
 .header__menu__alineado li {
   font-family: helvetica, arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 768px) {
