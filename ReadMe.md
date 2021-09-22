@@ -11,3 +11,26 @@
     - El footer de todas las paginas son iguales:
         - Los iconos de redes sociales son BLANCOS
         - Tienen un HOVER que al pasar el mouse, cambian de color
+- 22/09/2021: modificaciones para el proyecto Final:
+    - El logo final tiene 3 colores: ROSA, PASTEL, MARRON.
+    - Utilicé estos 3 colores a lo largo de las 5 paginas.
+    - Modifique el NAV Hamburguesa para que aparezca en tablet.
+    - Unifiqué en VARS los colores para hacer la asignación mas fácil.
+    - Modifique el color del CONTENEDOR DE QUIEN SOY (boton collapse que se titula "MAS...")
+    - Modifiqué el footer.
+    - La viñeta modificada en CONTACTO ahora es de color acorde al logo.
+    - Encontrarán animaciones en:
+        - Menú (hover)
+        - Footer (hover en los iconos de redes sociales)
+        - Fotos de pasteleros
+        - Fotos y nombres de tortas en DULCE
+        - Fotos y nombres de productos SALADO
+            - Fotos horizontales y verticales tienen animaciones diferentes
+    - Detalles Boostrap:
+        - En tamaño pantalla, use carrusel para mostrar fotos de salado/dulce/index (apagando columnas)
+        - En tamaño mediano/grande, apago Carrusel y ubico las fotos en columnas de acuerdo al tamaño de pantalla.
+        - Modifique el color y fuente del botón MAS en quien soy.
+        - Modifique la orientacón del submenu de hamburguesa a END/Right (estandar LEFT/START).
+        - Color fondo del fondo y de letras del NAV.
+        - En la pagina seleccionada, el texto es AZUL subrayado.
+        - Las fotos de DULCE y SALADO estan dentro de CARDS. Sus fondos son transparentes así se puede ver la imagen de fondo.

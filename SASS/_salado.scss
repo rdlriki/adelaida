@@ -27,7 +27,7 @@
             }
 
             & h5{   /*ESTILO LOS TITULOS Y USO OPERACIONES PARA AUMENTAR EL TAMAÑO DE LAS LETRAS*/
-                @include textoDulceSalado;
+                @include textoSalado;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 10px;
                 }
@@ -51,7 +51,7 @@
                 }
             }
             & h5{
-                @include textoDulceSalado;
+                @include textoSalado;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 6px;
                 }
@@ -72,6 +72,7 @@
         &__horizontales{
             & img{  /*IDEM ESTILADO DE FOTOS Y CONTENEDOR CON FOTOS VERTICALES*/
                 @include imgHorizontales;
+                border: 1px solid white;
                 @media screen and (min-width: $pantallaGrande){
                     width: 230px;
                     height: 170px;
@@ -82,7 +83,7 @@
                 animation-duration: 1s;
             }
             & p{
-                @include textoDulceSalado;
+                @include textoSalado;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 6px;
                 }
@@ -96,7 +97,7 @@
         }
         &__verticales{
             & img{ /*IDEM FOTOS VERTICALES*/
-                border: 1px solid black;
+                border: 1px solid white;
                 width: 348px;
                 height: 448px;
                 border-radius: 10px;
@@ -110,7 +111,7 @@
                 animation-duration: 1s;
             }
             & p{
-                @include textoDulceSalado;
+                @include textoSalado;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 6px;
                 }

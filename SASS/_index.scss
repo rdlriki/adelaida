@@ -5,11 +5,12 @@
 
 /*CAMBIO DE COLOR DE LAS LETRAS DEL MENU A ROSA*/
 .navbar .navbar-nav .nav-link {
-    color: rgb(196, 109, 123);
+    color: $ColorRosa;
 }
 
 /*Aca busco estilar el header que es comun a todos*/
 .header{
+    background-color: $ColorPastel;
     &__menu{
         &__adelaidaLogo{
             width: 150px;
@@ -38,24 +39,24 @@
 .main{
     &__tituloAdelaida{
         font-family: $fuenteEstilada;
-        color: #38b4a8;
+        color: $ColorTitulo;
         background-color: white;
         opacity: 90%;
         font-weight: bolder;
         & p{
             margin-bottom: 5px;
             @media screen and (max-width: $pantallaChica){  /*considero para cada resolucion*/
-                text-shadow: 1px 1px black;
+                text-shadow: 1px 1px $ColorPastel;
                 text-align: center;
-                font-size: 32px;
+                font-size: 24px;
             }
             @media screen and (min-width: $pantallaMediana){
-                text-shadow: 2px 1px black;
+                text-shadow: 2px 1px $ColorPastel;
                 padding-left: 10px;
                 font-size: 46px;
             }
             @media screen and (min-width: $pantallaGrande){
-                text-shadow: 2px 2px black;
+                text-shadow: 2px 2px $ColorPastel;
                 padding-left: 20px;
                 font-size: 68px;
             }
@@ -153,12 +154,14 @@
     }
 }
 
-.bootFooter{    /*estilo el footer*/
-    height:9vh;
-    & a{
-        color: white; /*La letra del boron en texto blanco*/
-        font-size: 20px;
-        margin: 5px 2px 5px 2px;
+.main{
+    &__bootFooter{    /*estilo el footer*/
+        height:9vh;
+        background: $ColorMarron;
+        &__redes a{
+            color: white; /*La letra del boron en texto blanco*/
+            font-size: 20px;
+        }
     }
 }
 

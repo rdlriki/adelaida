@@ -12,7 +12,7 @@
     border-color: black;
     box-shadow: 2px 2px grey;
     &:hover {
-        background:lightblue;
+        background:$ColorRosa;
         transform: scale(1.2);
     }
 }
@@ -22,6 +22,8 @@
     padding:5px;
     border-radius:3px;
     font-family: $TipoFuente;
+    color: $ColorMarron;
+    font-weight: bolder;
     font-size:0.8rem;
     @media screen and (min-width: $pantallaMediana) { /*ESTILO LA FOTO DE ACUERDO A RESOLUCION*/
         font-size: 1.1rem;
@@ -32,7 +34,7 @@
 }
 
 .btn-color {
-    @include button-bg(pink);
+    @include button-bg($ColorPastel);
     color:black;
 }
 
@@ -69,10 +71,11 @@
     &__contenedor{
         & p{
             font-family: $fuente;
-            color: black;
+            color: $ColorMarron;
             font-weight: bold;
-            background: rgb(240, 238, 238);
+            background: $ColorPastel;
             font-size: $FontSize;
+            border-radius: 5px;
             @media screen and (min-width: $pantallaMediana) {
                 font-size: $FontSize + 10px;
             } 
@@ -82,12 +85,15 @@
         }
         &__detalle{ /*ESTILO LA LETRA DEL CONTENEDOR*/
             font-family: $fuente;
-            color:white;
+            color: white;
+            text-shadow: 1px 1px $ColorMarron;
             font-size: $FontSize;
-            text-shadow: 1px 1px black;
             text-align: justify;    
             padding: 5px;
 
+            &--fondo{
+                background: $ColorRosa;
+            }
             @media screen and (min-width: $pantallaMediana) {
                 font-size: $FontSize + 2px;
                 letter-spacing: 1px;    /* ACA REPITO ESPACIO ENTRE LETRAS, PARRAGOS Y PALABRAS*/
@@ -95,8 +101,8 @@
             } 
             @media screen and (min-width: $pantallaGrande) {
                 font-size: $FontSize + 4px;
-            } 
-
+            }
+            
             & img{  /*ESTILO LA IMAGEN DENTRO*/
                 border: 1px solid black;
                 box-shadow: 2px 2px white;
@@ -129,22 +135,20 @@
 .articleQuienSoy{
     & h3{   /*ESTILO EL DETALLE DEL ARTICULO QUIEN SOY*/
         font: oblique;
-        color: rgb(50, 160, 220);
+        color: lightgreen;
+        text-shadow: 1px 1px black;
         font-weight: bold;
         font-size: $FontSize + 2px;
-        text-shadow: 1px 1px white; 
         margin: 10px 0px 10px 0px;
         border-top: 1px solid white;
         text-align: center;
         @media screen and (min-width: $pantallaMediana) {
             font-size: 24px;
-            text-shadow: 1px 1px black; 
-            margin-left: 10px 0px 10px 10px;
-            
+            margin-left: 10px 0px 10px 10px;           
         }
         @media screen and (min-width: $pantallaGrande) {
             font-size: 32px;
-            text-shadow: 1px 2px white; 
+            text-shadow: 1px 2px BLACK; 
             margin-left: 10px 0px 10px 10px;
         }
     }

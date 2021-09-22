@@ -1,19 +1,29 @@
 @charset "UTF-8";
+/* Color ROSA del Logo de Adelaida */
+/* Color MARRON del Logo de Adelaida */
+/* Color PASTEL del Logo de Adelaida */
 #index {
   background-image: url(../Multimedia/IMG/FondoDulce1.jpg);
   min-height: 480px;
   background-size: cover;
+  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
   background-position: center;
+  /* CENTRADA */
   background-repeat: no-repeat;
+  /* SIN REPETIR */
   /*hago un mixin del fodo de pantalla. Esto se repite en todos*/
 }
 
 /*CAMBIO DE COLOR DE LAS LETRAS DEL MENU A ROSA*/
 .navbar .navbar-nav .nav-link {
-  color: #c46d7b;
+  color: #FF88B8;
 }
 
 /*Aca busco estilar el header que es comun a todos*/
+.header {
+  background-color: #FFDAE9;
+}
+
 .header__menu__adelaidaLogo {
   width: 150px;
   height: auto;
@@ -45,7 +55,7 @@
 
 .main__tituloAdelaida {
   font-family: "Italianno", cursive;
-  color: #38b4a8;
+  color: #826D76;
   background-color: white;
   opacity: 90%;
   font-weight: bolder;
@@ -58,15 +68,15 @@
 @media screen and (max-width: 767px) {
   .main__tituloAdelaida p {
     /*considero para cada resolucion*/
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #FFDAE9;
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .main__tituloAdelaida p {
-    text-shadow: 2px 1px black;
+    text-shadow: 2px 1px #FFDAE9;
     padding-left: 10px;
     font-size: 46px;
   }
@@ -74,7 +84,7 @@
 
 @media screen and (min-width: 1024px) {
   .main__tituloAdelaida p {
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px #FFDAE9;
     padding-left: 20px;
     font-size: 68px;
   }
@@ -194,16 +204,16 @@
   }
 }
 
-.bootFooter {
+.main__bootFooter {
   /*estilo el footer*/
   height: 9vh;
+  background: #826D76;
 }
 
-.bootFooter a {
+.main__bootFooter__redes a {
   color: white;
   /*La letra del boron en texto blanco*/
   font-size: 20px;
-  margin: 5px 2px 5px 2px;
 }
 
 /*Hago un heach para que los iconos tengan color blanco, ver VARS*/
@@ -236,15 +246,18 @@
   background-image: url(../Multimedia/IMG/FondoQuienSoy.jpg);
   min-height: 480px;
   background-size: cover;
+  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
   background-position: center;
+  /* CENTRADA */
   background-repeat: no-repeat;
+  /* SIN REPETIR */
 }
 
 /*GENERO UN CAMBIO EN EL COLOR DEL BOTON MAS..*/
 /*EL COLOR ES ROSA CON LETRAS NEGRAS */
 /*CON HOVER, TENGO FONDO CELESTE Y AGRANDA TAMAÑO*/
 .btn-color {
-  background: pink;
+  background: #FFDAE9;
   border-color: black;
   -webkit-box-shadow: 2px 2px grey;
           box-shadow: 2px 2px grey;
@@ -252,7 +265,7 @@
 }
 
 .btn-color:hover {
-  background: lightblue;
+  background: #FF88B8;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -262,6 +275,8 @@
   padding: 5px;
   border-radius: 3px;
   font-family: "Poiret One,cursive";
+  color: #826D76;
+  font-weight: bolder;
   font-size: 0.8rem;
 }
 
@@ -308,10 +323,11 @@
 
 .mainQuienSoy__contenedor p {
   font-family: helvetica, arial, sans-serif;
-  color: black;
+  color: #826D76;
   font-weight: bold;
-  background: #f0eeee;
+  background: #FFDAE9;
   font-size: 12px;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -330,10 +346,14 @@
   /*ESTILO LA LETRA DEL CONTENEDOR*/
   font-family: helvetica, arial, sans-serif;
   color: white;
+  text-shadow: 1px 1px #826D76;
   font-size: 12px;
-  text-shadow: 1px 1px black;
   text-align: justify;
   padding: 5px;
+}
+
+.mainQuienSoy__contenedor__detalle--fondo {
+  background: #FF88B8;
 }
 
 @media screen and (min-width: 768px) {
@@ -399,10 +419,10 @@
 .articleQuienSoy h3 {
   /*ESTILO EL DETALLE DEL ARTICULO QUIEN SOY*/
   font: oblique;
-  color: #32a0dc;
+  color: lightgreen;
+  text-shadow: 1px 1px black;
   font-weight: bold;
   font-size: 14px;
-  text-shadow: 1px 1px white;
   margin: 10px 0px 10px 0px;
   border-top: 1px solid white;
   text-align: center;
@@ -411,7 +431,6 @@
 @media screen and (min-width: 768px) {
   .articleQuienSoy h3 {
     font-size: 24px;
-    text-shadow: 1px 1px black;
     margin-left: 10px 0px 10px 10px;
   }
 }
@@ -419,7 +438,7 @@
 @media screen and (min-width: 1024px) {
   .articleQuienSoy h3 {
     font-size: 32px;
-    text-shadow: 1px 2px white;
+    text-shadow: 1px 2px BLACK;
     margin-left: 10px 0px 10px 10px;
   }
 }
@@ -569,8 +588,11 @@
   background-image: url(../Multimedia/IMG/FondoPan2.jpg);
   min-height: 480px;
   background-size: cover;
+  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
   background-position: center;
+  /* CENTRADA */
   background-repeat: no-repeat;
+  /* SIN REPETIR */
 }
 
 .mainSalado__carrusel {
@@ -626,8 +648,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -668,8 +690,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -705,6 +727,7 @@
   width: 170px;
   height: 130px;
   border-radius: 10px;
+  border: 1px solid white;
 }
 
 @media screen and (min-width: 1024px) {
@@ -728,8 +751,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -753,7 +776,7 @@
 
 .mainSalado__tarjetas__verticales img {
   /*IDEM FOTOS VERTICALES*/
-  border: 1px solid black;
+  border: 1px solid white;
   width: 348px;
   height: 448px;
   border-radius: 10px;
@@ -779,8 +802,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -805,8 +828,11 @@
   background-image: url(../Multimedia/IMG/FondoDulce6.jpg);
   min-height: 480px;
   background-size: cover;
+  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
   background-position: center;
+  /* CENTRADA */
   background-repeat: no-repeat;
+  /* SIN REPETIR */
 }
 
 /*EN DULCE HAGO LO MISMO QUE EN SALADO, PERO, AQUI TODAS LAS IMAGENES SON HORIZONTLES*/
@@ -852,8 +878,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -899,8 +925,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -955,8 +981,8 @@
   font-weight: bold;
   text-transform: capitalize;
   /*TRANSFORMO EL TEXTO*/
-  color: #038eb8;
-  text-shadow: 1px 1px white;
+  color: #FF88B8;
+  text-shadow: 1px 1px black;
   font-size: 22px;
 }
 
@@ -973,8 +999,8 @@
 }
 
 .mainDulce__tarjetas p:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* PAGINA CONTACTO */
@@ -982,8 +1008,11 @@
   background-image: url(../Multimedia/IMG/Contactenos1.jpg);
   min-height: 480px;
   background-size: cover;
+  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
   background-position: center;
+  /* CENTRADA */
   background-repeat: no-repeat;
+  /* SIN REPETIR */
 }
 
 /* TITULO QUE SE LEE EN LA PAGINA CONTACTO */

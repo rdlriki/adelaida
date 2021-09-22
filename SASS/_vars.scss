@@ -5,22 +5,30 @@ $pantallaMediana: 768px;
 $pantallaGrande: 1024px;
 $FontSize: 12px;
 $FontItalianno: 22px;
+$ColorRosa: #FF88B8; /* Color ROSA del Logo de Adelaida */
+$ColorMarron: #826D76; /* Color MARRON del Logo de Adelaida */
+$ColorPastel: #FFDAE9; /* Color PASTEL del Logo de Adelaida */
+$ColorTitulo: $ColorMarron;
 
 @mixin fondoPantalla{
     min-height: 480px;
-    background-size:cover;  // COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER
-    background-position: center;    //CENTRADA
-    background-repeat: no-repeat;   //SIN REPETIR
+    background-size:cover;  /* COMO LA IMAGEN ES PEQUEÑA, LA PONGO COVER */
+    background-position: center;    /* CENTRADA */
+    background-repeat: no-repeat;   /* SIN REPETIR */
 }
 
-@mixin textoDulceSalado{
+@mixin textoSalado{
     text-align: center;
     font-family: $fuenteEstilada;
     font-weight: bold;
     text-transform: capitalize; /*TRANSFORMO EL TEXTO*/
-    color: #038eb8;
-    text-shadow: 1px 1px white;
+    color: $ColorRosa;
+    text-shadow: 1px 1px black;
     font-size: $FontItalianno ;
+}
+
+@mixin textoDulce{
+    @include textoSalado;
 }
 
 @mixin imgCarrusel{

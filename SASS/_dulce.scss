@@ -27,7 +27,7 @@
                 }  
             }
             & h5{
-                @include textoDulceSalado;
+                @include textoDulce;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 10px;
                 }
@@ -53,7 +53,7 @@
                 }  
             }
             & h5{
-                @include textoDulceSalado;
+                @include textoDulce;
                 @media screen and (min-width: $pantallaMediana){
                     font-size: $FontItalianno + 10px;
                 }
@@ -85,7 +85,7 @@
 
         }
         & p{
-            @include textoDulceSalado;
+            @include textoDulce;
             @media screen and (min-width: $pantallaMediana){
                 font-size: 28px;
             }
@@ -94,7 +94,7 @@
             }  
         }
         & p:hover{
-            transform:scale(1.5);
+            transform:scale(1.3);
         }
     }
 }
