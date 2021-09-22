@@ -152,7 +152,7 @@
         & h3{
             font-family: $fuenteEstilada;
             color: #b3c11b;
-            text-shadow: 1px 2px black; 
+            text-shadow: 1px 1px black; 
             margin-left: 5px;
             font-size: 30px;
             @media screen and (min-width: $pantallaMediana){
@@ -188,7 +188,7 @@
 
 .main{
     &__bootFooter{    /*estilo el footer*/
-        height:13vh;
+        height:14vh;
         background: $ColorMarron;
         display: flex;
         flex-direction: column;

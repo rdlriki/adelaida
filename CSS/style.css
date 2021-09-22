@@ -211,7 +211,7 @@
 .presentacion__titulo h3 {
   font-family: "Italianno", cursive;
   color: #b3c11b;
-  text-shadow: 1px 2px black;
+  text-shadow: 1px 1px black;
   margin-left: 5px;
   font-size: 30px;
 }
@@ -260,7 +260,7 @@
 
 .main__bootFooter {
   /*estilo el footer*/
-  height: 13vh;
+  height: 14vh;
   background: #826D76;
   display: -webkit-box;
   display: -ms-flexbox;
