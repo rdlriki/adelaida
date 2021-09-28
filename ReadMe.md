@@ -36,3 +36,5 @@
         - Color del fondo y de letras del NAV.
         - En la pagina seleccionada, el texto es AZUL subrayado.
         - Las fotos de DULCE y SALADO estan dentro de CARDS. Sus fondos son transparentes así se puede ver la imagen de fondo.
+- 27/09/21: modificaciones en ReadMe:
+    - Genero esta revision para comentar que la gran mayoria de moficaciones que fui realizando, fueron consejos que mi tutor me fue haciendo.
