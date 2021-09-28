@@ -29,8 +29,8 @@
             - Fotos horizontales y verticales tienen animaciones diferentes
         - El logo tiene animación cuando se ejecuta la página
     - Detalles Boostrap:
-        - En tamaño pantalla, use carrusel para mostrar fotos de salado/dulce/index (apagando columnas)
-        - En tamaño mediano/grande, apago Carrusel y ubico las fotos en columnas de acuerdo al tamaño de pantalla.
+        - En tamaño pantalla chica, use carrusel para mostrar fotos de salado/dulce/index (apagando columnas)
+        - En tamaño pantalla mediano/grande, apago Carrusel y ubico las fotos en columnas de acuerdo al tamaño de pantalla.
         - Modifique el color y fuente del botón MAS en quien soy.
         - Modifique la orientacón del submenu de hamburguesa a END/Right (estandar LEFT/START).
         - Color fondo del fondo y de letras del NAV.
