@@ -33,6 +33,6 @@
         - En tamaño pantalla mediano/grande, apago Carrusel y ubico las fotos en columnas de acuerdo al tamaño de pantalla.
         - Modifique el color y fuente del botón MAS en quien soy.
         - Modifique la orientacón del submenu de hamburguesa a END/Right (estandar LEFT/START).
-        - Color fondo del fondo y de letras del NAV.
+        - Color del fondo y de letras del NAV.
         - En la pagina seleccionada, el texto es AZUL subrayado.
         - Las fotos de DULCE y SALADO estan dentro de CARDS. Sus fondos son transparentes así se puede ver la imagen de fondo.
