@@ -69,7 +69,7 @@ En cada pagina, se incluyò SEO acorde a cada pagina.
 
 
 ### **SERVIDORES**
-Si bien en la secciòn **ABOUT** figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/ \
+Si bien en la secciòn **ABOUT** figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/ 
 
 Tambien se puede acceder desde aca: https://adelaidapatisserie.000webhostapp.com/index.html 
 \
