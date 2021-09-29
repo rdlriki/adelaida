@@ -42,10 +42,11 @@
 
 # 29/09/21 - PROYECTO FINAL RICARDO LÒPEZ - ENTREGA 
 
-Adelaida Pâtisserie es una pagina de reposteria (Dulce y Salado). 
-Como indica el SEO de Index: Adelaida Pâtisserie, preparaciones caseras con productos de primera calidad. Sabores de placer.
+**Adelaida Pâtisserie** es una pagina de reposteria (Dulce y Salado).\
+Como indica el **SEO** de Index: **Adelaida Pâtisserie, preparaciones caseras con productos de primera calidad. Sabores de placer**.
 
-El diseño de esta web se compone de:
+
+### El diseño de esta web se compone de:
     - Visual Code (editor)
     - HTML y CSS
     - SASS
@@ -53,7 +54,7 @@ El diseño de esta web se compone de:
     - GIT (repositorio local) y subido a GITHUB
     - Editores graficos para las fotos / logos
 
-El diseño se compone de 5 paginas:
+### El diseño se compone de 5 paginas:
     - HOME / Index: Pantalla inicial
     - Quien Soy: Busca compartir con el usuario quién es la pastelera, contar su pasión y compartir con quien se siente representado en la pasteleria
     - Salado: Preparaciones Saladas
@@ -61,22 +62,24 @@ El diseño se compone de 5 paginas:
     - Contacto: Espacio que el usuario puede: hacer un pedido de producto o enviar comentarios.
 
 
-DISEÑO:
-El progreso del diseño de la pagina fue mutando con cada devolucion de mi tutor, que por suerte siempre me dio animos para sortear los problemas y mejorar cada presentación.
-El responsive de las paginas fue pensado en 3 tamaños: mobile, tablet y laptop (las 2 primeras, tienen el menu hamburguesa).
+### **DISEÑO**:
+El progreso del diseño de la pagina fue mutando con cada devolucion de mi tutor, que por suerte siempre me dio animos para sortear los problemas y mejorar cada presentación.\
+El responsive de las paginas fue pensado en 3 tamaños: mobile, tablet y laptop (las 2 primeras, tienen el menu hamburguesa).\
 En cada pagina, se incluyò SEO acorde a cada pagina.
 
-Si bien en la secciòn ABOUT figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/
-
+Si bien en la secciòn **ABOUT** figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/
+\
+\
 Datos de la cursada:
 - Comision: 22220
 - Curso: Desarrollo Web
 - Profesor: Rodrigo Zungri
 - Tutor: Joaquin Gonzalez
 
-MUCHAS GRACIAS RODRIGO POR TU PACIENCIA Y POR TUS EXPLICACIONES.
-Has sido el motor de varios para que nos dediquemos a diseñar web.
+
+MUCHAS GRACIAS RODRIGO POR TU PACIENCIA Y POR TUS EXPLICACIONES.\
+Has sido el motor de varios para que nos dediquemos a diseñar web.\
 GRACIAS y ha sido un placer cursar con vos.
 
-Atte.
+Atte.\
 Ricardo.
