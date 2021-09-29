@@ -67,7 +67,11 @@ El progreso del diseño de la pagina fue mutando con cada devolucion de mi tutor
 El responsive de las paginas fue pensado en 3 tamaños: mobile, tablet y laptop (las 2 primeras, tienen el menu hamburguesa).\
 En cada pagina, se incluyò SEO acorde a cada pagina.
 
-Si bien en la secciòn **ABOUT** figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/
+
+### **SERVIDORES**
+Si bien en la secciòn **ABOUT** figura el link de la pagina, dejo copiado aquì el link: https://rdlriki.github.io/adelaida/ \
+
+Tambien se puede acceder desde aca: https://adelaidapatisserie.000webhostapp.com/index.html 
 \
 \
 Datos de la cursada:
