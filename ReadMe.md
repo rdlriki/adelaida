@@ -40,7 +40,7 @@
     - Genero esta revision para comentar que la gran mayoria de moficaciones que fui realizando, fueron consejos que mi tutor me fue haciendo.
 
 
-#29/09/21 - PROYECTO FINAL RICARDO LÒPEZ - ENTREGA 
+# 29/09/21 - PROYECTO FINAL RICARDO LÒPEZ - ENTREGA 
 
 Adelaida Pâtisserie es una pagina de reposteria (Dulce y Salado). 
 Como indica el SEO de Index: Adelaida Pâtisserie, preparaciones caseras con productos de primera calidad. Sabores de placer.
